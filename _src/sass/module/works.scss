@@ -1,0 +1,48 @@
+
+@import "../config/config";
+
+$about_pc_width: 700px;
+
+@mixin heding3() {
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
+}
+
+@mixin box($ratio) {
+	padding: 40px 0;
+	width: $about_pc_width/$ratio;
+}
+
+
+
+.works-container {
+	@include container();
+
+/*   Heading  */
+
+	#heading_bg {
+		height: 180px;
+		flex-basis: 100%;
+		background: url(../img/bg_about.jpg);
+		background-position: 50% 67%;
+
+		h2 {
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 180px;
+			text-align: center;
+			background: rgba(#000, 0.20);
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+}
+
+@media screen and (max-width: 540px) {
+
+}
+	

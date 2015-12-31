@@ -1,0 +1,17 @@
+header {
+  background-color: #112; }
+  header nav {
+    max-width: 940px;
+    margin: 0 auto; }
+    header nav ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: red; }
+    header nav li {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }

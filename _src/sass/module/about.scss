@@ -1,0 +1,244 @@
+
+@import "../config/config";
+
+$about_pc_width: 700px;
+
+@mixin holder($ratio) {
+	padding: 40px 0;
+	width: $about_pc_width/$ratio;
+}
+
+.about-container {
+	@include container();
+
+/*   Heading  */
+
+	#heading_bg {
+		height: 180px;
+		flex-basis: 100%;
+		background: url(../img/bg_about.jpg);
+		background-position: 50% 67%;
+
+		h2 {
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 180px;
+			text-align: center;
+			background: rgba(#000, 0.20);
+		}
+	}
+
+
+/*  Profile  */
+
+	.plofile {
+		flex-basis: 100%;
+
+		.holder {
+			margin: 0 auto;
+			@include holder(1);
+
+			h3 {
+				@include heding3();
+				border-bottom: 1px solid $border_color;
+			}
+			img {
+				width: 215px;
+				border-radius: 215px;
+				margin: 20px 20px;
+			}
+
+			dl {
+				display: inline-block;
+				vertical-align: top;
+				margin-left: 60px;
+				margin-top: 15px;
+			}
+			dt {
+				margin-top: 10px;
+				font-size: 11px;
+			}
+			dd {
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+	}
+
+
+/*  Skills  */
+
+	.skills {
+		background: $bg_gray;
+		flex-basis: 50%;
+
+		.holder {
+			@include holder(2);
+			margin-left: auto;
+
+			h3 {
+				@include heding3();
+			}
+			
+			dl {
+				margin-top: 15px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			dt {
+				font-size: 14px;
+				height: 30px;
+				line-height: 30px;
+				flex: 35%;
+				border-bottom: 1px solid $border_color;
+			}
+			dd {
+				height: 30px;
+				flex: 35%;
+				margin-right: 25%;	
+				vertical-align: top;
+				border-bottom: 1px solid $border_color;
+			}
+
+			@mixin star_circle($color) {
+				background: $color;
+				width: 8px;
+				height: 8px;
+				border-radius: 8px;
+				display: inline-block;
+				margin-left: 14px;
+			}
+
+			.circle_red {
+				@include star_circle(#FC9494);		
+			}
+			.circle_green {
+				@include star_circle(#94FCBA);
+			}
+			.circle_blue {
+				@include star_circle(#94D2FC);
+			}
+			.circle_orange {
+				@include star_circle(#FCD194);
+			}
+		}
+	}
+
+
+/*  Experience  */
+
+	.experience {
+		background: $bg_gray;
+		flex-basis: 50%;
+
+		.holder {
+			height: 100%;
+			@include holder(2);
+			margin-right: auto;
+			margin-left: 10px;
+
+			h3 {
+				@include heding3();
+			}
+
+			dl {
+				margin-top: 15px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			dt {
+				flex-basis: 50%;
+				height: 45px;
+
+				.month {
+					font-size: 14px;
+				}
+				.term {
+					font-size: 10px;
+					margin-top: -2px;
+				}
+			}
+
+			dd {
+				flex-basis: 50%;
+				height: 45px;
+
+				.company {
+					vertical-align: top;
+					font-size: 14px;
+					color: $text_color;
+				}
+				.company:hover {
+					text-decoration: underline;
+				}
+				.role {
+					font-size: 10px;
+					margin-top: -5px;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+
+/*  Avout this site  */
+
+	.about_this_site {
+		flex-basis: 100%;
+		padding-bottom: 20px;
+
+		.holder {
+			@include holder(1);
+			height: 100%;
+			margin: 0 auto;
+
+			h3 {
+				@include heding3();
+			}
+
+			.description {
+				margin-top: 15px;
+
+				p {
+					font-size: 13px;
+					margin-top: 10px;
+					line-height: 1.8em;
+
+					a {
+						color: #1BA6D3;
+					}
+					a:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about-contaner {
+		// display: none;
+		.heading {
+			height: 70px;
+		}
+
+		.skills {
+			flex-basis: 100%;
+		}
+
+		.experience {
+			flex-basis: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.about-contaner {
+
+	}
+}
+	

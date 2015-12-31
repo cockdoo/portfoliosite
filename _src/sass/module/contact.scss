@@ -1,0 +1,109 @@
+@import "../config/config";
+
+$contact_pc_width: 700px;
+
+.contact-container {
+	@include container();
+
+/*   Heading  */
+
+	#heading_bg {
+		height: 180px;
+		flex-basis: 100%;
+		background: url(../img/bg_about.jpg);
+		background-position: 50% 67%;
+
+		h2 {
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 180px;
+			text-align: center;
+			background: rgba(#000, 0.20);
+		}
+	}
+
+
+/*  Form  */
+
+	#mail {
+		max-width: $contact_pc_width;
+		margin: 30px auto;
+		height: auto;
+		
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		dt {
+			flex-basis: 20%;
+			height: 50px;
+			line-height: 50px;
+			text-align: right;
+			font-size: 16px;
+		}
+		dd {
+			flex-basis: 70%;
+			margin-left: 20px;
+			
+			@mixin textarea() {
+				border: 1px $border_color solid;
+				box-shadow: 1px 1px 0px $border_color inset;
+				background: #fafafa;
+				font-size: 14px;
+				padding: 0 5px;
+				color: $text_color;
+			}
+			@mixin focus() {
+				outline-color: $orange;
+				outline-width: 3px;
+			}
+			input {
+				height: 30px;
+				margin-top: 10px;
+				margin-right: 10px;
+				border-radius: 4px;
+				border: none;
+				@include textarea();
+			}
+			input:focus {
+				@include focus();
+			} 
+			textarea {
+				border-radius: 4px;
+				margin-top: 10px;
+				@include textarea();
+			}
+			textarea:focus {
+				@include focus();
+			} 
+		}
+		.send {
+			// background: #100637;
+			background: $orange;
+			color: #fff;
+			font-weight: bold;
+			padding: 10px 50px;
+			border: none;
+			border-radius: 4px;
+			display: block;
+			margin: 30px auto 10px;
+		}
+		.send:hover {
+			cursor: pointer;
+			opacity: 0.8;
+		}
+		.send:focus {
+			outline: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 540px) {
+
+}
+	

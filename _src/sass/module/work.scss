@@ -1,0 +1,128 @@
+
+@import "../config/config";
+
+$about_pc_width: 930px;
+
+@mixin holder($ratio) {
+	padding: 40px 0;
+	// width: $about_pc_width/$ratio;
+	max-width: $about_pc_width/$ratio;
+}
+
+.work-container {
+	@include container();
+
+/*   Heading  */
+
+	#heading_bg {
+		height: 180px;
+		flex-basis: 100%;
+		background: url(../img/bg_about.jpg);
+		background-position: 50% 67%;
+
+		h2 {
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 180px;
+			text-align: center;
+			background: rgba(#000, 0.20);
+		}
+	}
+	.main {
+		width: 100%;
+
+		h4 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 20px 40px 10px;
+		}
+
+		ul {
+			
+		}
+	}
+
+/*  Information  */
+	
+	.outline {
+		background: $bg_gray;
+		flex-basis: 50%;
+
+		.holder {
+			@include holder(2);
+			margin-left: auto;
+
+			.subtitle {
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.description {
+				font-size: 14px;
+				margin-top: 16px;
+				line-height: 1.8em;
+			}
+
+			a {
+				display: inline-block;
+				padding: 15px 65px;
+				background: $orange;
+				color: #fff;
+				margin-top: 30px;
+				border-radius: 4px;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			a:hover {
+				opacity: 0.9;
+			}
+		}
+	}
+	.detail {
+		background: $bg_gray;
+		flex-basis: 50%;
+
+		.holder {
+			@include holder(2);
+			margin-right: auto;
+
+			dl {
+				margin-left: 40px;
+			}
+			dt {
+				font-size: 11px;
+				font-weight: bold;
+			}
+			dt:first-child {
+				margin-top: 0px;
+			}
+			dd {
+				font-size: 14px;
+				margin: 0px 0 15px;
+
+				.members {
+
+				}
+				.role {
+					font-size: 10px;
+					margin: -2px 0 5px;
+				}
+				.month {
+				}
+				.term {
+					font-size: 10px;
+					margin-top: -2px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+}
+
+@media screen and (max-width: 540px) {
+
+}
+	

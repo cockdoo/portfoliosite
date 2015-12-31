@@ -1,0 +1,36 @@
+
+// color
+$deep_blue: #031418;
+$text_color: #4A4A4A;
+$border_color: #E0E0E0;
+$bg_gray: #F6F6F6;
+$orange: #EC9B52;
+
+// font-size
+$font_base_size: 12px;
+
+// font-familiy
+$serif: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$sanssans: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+//size
+$pc_width: 940px;
+$header_height: 40px;
+
+a {
+	text-decoration: none;
+}
+
+@mixin heding3() {
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
+}
+
+@mixin container() {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	color: $text_color;
+	margin-top: $header_height;
+}
