@@ -42,8 +42,38 @@ window.onscroll = function(){
 }
 
 // if文で書く
+$('#blur_01').backgroundBlur({
+    imageURL : 'img/work/petapeta/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+});
+$('#blur_02').backgroundBlur({
+    imageURL : 'img/work/mybousainote/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+});
+$('#blur_03').backgroundBlur({
+    imageURL : 'img/work/clanberry/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+});
+$('#blur_04').backgroundBlur({
+    imageURL : 'img/work/battery/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+});
+$('#blur_05').backgroundBlur({
+    imageURL : 'img/work/iage/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+});
 $('#blur_06').backgroundBlur({
-    imageURL : 'img/work/ndge/thumb.jpg',
+    imageURL : 'img/work/roadscape/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0

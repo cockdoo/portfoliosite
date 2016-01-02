@@ -360,8 +360,9 @@ a {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    background: url(../img/bg_about.jpg);
-    background-position: 50% 67%; }
+    background: url(../img/bg_contact.jpg);
+    background-size: 1300px auto;
+    background-position: 60% 20%; }
     .contact-container #heading_bg h2 {
       font-size: 30px;
       font-weight: bold;
@@ -666,10 +667,7 @@ a {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-align-content: space-between;
-        -ms-flex-line-pack: justify;
-            align-content: space-between; }
+            justify-content: space-between; }
     .works ul li {
       -webkit-flex-basis: 32%;
           -ms-flex-preferred-size: 32%;
@@ -686,10 +684,10 @@ a {
         left: 0px; }
       .works ul li .blur {
         position: absolute;
-        top: -5%;
-        left: -5%;
-        width: 110%;
-        height: 110%;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
         opacity: 0.0;
         -webkit-transition: opacity 0.1s ease;
         transition: opacity 0.1s ease; }
@@ -703,7 +701,7 @@ a {
         left: 0px;
         width: 84%;
         height: 86%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.55);
         color: #fff;
         padding: 7% 8%;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
@@ -719,12 +717,12 @@ a {
           height: 2px;
           background: #fff; }
         .works ul li .overlay .description {
-          font-size: 9px;
+          font-size: 11px;
           line-height: 1.8em; }
     .works ul li:before {
       content: "";
       display: block;
-      padding: 28%; }
+      padding: 32%; }
     .works ul li:hover > a {
       opacity: 1.0; }
     .works ul li:hover > .blur {
@@ -852,8 +850,9 @@ a {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    background: url(../img/bg_about.jpg);
-    background-position: 50% 67%; }
+    background: url(../img/bg_works.jpg);
+    background-size: 1400px auto;
+    background-position: 0% 70%; }
     .works-container #heading_bg h2 {
       font-size: 30px;
       font-weight: bold;
