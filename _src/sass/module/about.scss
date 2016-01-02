@@ -2,34 +2,39 @@
 @import "../config/config";
 
 $about_pc_width: 700px;
+$about_tablet_width: 490px;
 
-@mixin holder($ratio) {
+@mixin holder($width) {
 	padding: 40px 0;
-	width: $about_pc_width/$ratio;
+	width: $width;
+}
+
+@mixin h2() {
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
 }
 
 .about-container {
 	@include container();
 
 /*   Heading  */
-
+	
 	#heading_bg {
-		height: 180px;
-		flex-basis: 100%;
 		background: url(../img/bg_about.jpg);
-		background-size: 1300px auto;
-		background-position: 50% 80%;
+		@include heading_bg();
 
-		h2 {
-			font-size: 30px;
-			font-weight: bold;
-			color: #fff;
-			line-height: 180px;
-			text-align: center;
+		h1 {
+			@include h1_sub;
 			background: rgba(#000, 0.10);
 		}
 	}
 
+@media screen and (min-width: 1300px) {
+	#heading_bg {
+		background-size: cover;
+	}
+}
 
 /*  Profile  */
 
@@ -37,11 +42,12 @@ $about_pc_width: 700px;
 		flex-basis: 100%;
 
 		.holder {
+			@include holder($about_pc_width);
 			margin: 0 auto;
-			@include holder(1);
 
-			h3 {
-				@include heding3();
+			h2 {
+				@include h2();
+				padding-bottom: 2px;
 				border-bottom: 1px solid $border_color;
 			}
 			img {
@@ -49,7 +55,6 @@ $about_pc_width: 700px;
 				border-radius: 215px;
 				margin: 20px 20px;
 			}
-
 			dl {
 				display: inline-block;
 				vertical-align: top;
@@ -71,15 +76,15 @@ $about_pc_width: 700px;
 /*  Skills  */
 
 	.skills {
-		background: $bg_gray;
+		background: $gray;
 		flex-basis: 50%;
 
 		.holder {
-			@include holder(2);
+			@include holder($about_pc_width/2);
 			margin-left: auto;
 
-			h3 {
-				@include heding3();
+			h2 {
+				@include h2();
 			}
 			
 			dl {
@@ -88,19 +93,19 @@ $about_pc_width: 700px;
 				flex-wrap: wrap;
 			}
 
+			$list_height: 32px;
 			dt {
-				font-size: 14px;
-				height: 30px;
-				line-height: 30px;
-				flex: 35%;
-				border-bottom: 1px solid $border_color;
+				height: $list_height;
+				line-height: $list_height;
+				flex: 34%;
+				// border-bottom: 1px solid $border_color;
 			}
 			dd {
-				height: 30px;
+				height: $list_height;
 				flex: 35%;
 				margin-right: 25%;	
 				vertical-align: top;
-				border-bottom: 1px solid $border_color;
+				// border-bottom: 1px solid $border_color;
 			}
 
 			@mixin star_circle($color) {
@@ -110,6 +115,7 @@ $about_pc_width: 700px;
 				border-radius: 8px;
 				display: inline-block;
 				margin-left: 14px;
+				margin-top: 12px;
 			}
 
 			.circle_red {
@@ -127,21 +133,42 @@ $about_pc_width: 700px;
 		}
 	}
 
+@media screen and (max-width: 768px) {
+	.skills {
+		flex-basis: 100%;
+		background: none;
+		margin-left: 0px;
+		padding: 0 20px;
+
+		.holder {
+			@include holder($about_tablet_width);
+			margin: 0 auto;
+
+			h2 {
+				border-bottom: 1px solid $border_color;
+			}
+
+			dl {
+				padding: 0 30px;
+			}
+		}
+	}
+}
+
 
 /*  Experience  */
 
 	.experience {
-		background: $bg_gray;
+		background: $gray;
 		flex-basis: 50%;
 
 		.holder {
-			height: 100%;
-			@include holder(2);
+			@include holder($about_pc_width/2);
 			margin-right: auto;
 			margin-left: 10px;
 
-			h3 {
-				@include heding3();
+			h2 {
+				@include h2();
 			}
 
 			dl {
@@ -149,23 +176,23 @@ $about_pc_width: 700px;
 				display: flex;
 				flex-wrap: wrap;
 			}
-
 			dt {
 				flex-basis: 50%;
 				height: 45px;
 
 				.month {
-					font-size: 14px;
+					
 				}
 				.term {
 					font-size: 10px;
 					margin-top: -2px;
+					color: $subtext_color;
 				}
 			}
-
 			dd {
 				flex-basis: 50%;
 				height: 45px;
+
 
 				.company {
 					vertical-align: top;
@@ -177,12 +204,34 @@ $about_pc_width: 700px;
 				}
 				.role {
 					font-size: 10px;
-					margin-top: -5px;
-					vertical-align: top;
+					margin-top: -2px;
+					color: $subtext_color;
 				}
 			}
 		}
 	}
+
+@media screen and (max-width: 768px) {
+	.experience {
+		flex-basis: 100%;
+		background: none;
+		padding: 0 20px;
+
+		.holder {
+			@include holder($about_tablet_width);
+			margin: 0 auto;
+
+			h2 {
+				border-bottom: 1px solid $border_color;
+			}
+
+			dl {
+				margin-top: 30px;
+				padding: 0 30px;
+			}
+		}
+	}
+}
 
 
 /*  Avout this site  */
@@ -192,12 +241,12 @@ $about_pc_width: 700px;
 		padding-bottom: 20px;
 
 		.holder {
-			@include holder(1);
+			@include holder($about_pc_width);
 			height: 100%;
 			margin: 0 auto;
 
-			h3 {
-				@include heding3();
+			h2 {
+				@include h2();
 			}
 
 			.description {
@@ -218,23 +267,30 @@ $about_pc_width: 700px;
 			}
 		}
 	}
-}
 
 @media screen and (max-width: 768px) {
-	.about-contaner {
-		// display: none;
-		.heading {
-			height: 70px;
-		}
+	.about_this_site {
+		flex-basis: 100%;
+		background: none;
+		padding: 0 20px;
 
-		.skills {
-			flex-basis: 100%;
-		}
+		.holder {
+			@include holder($about_tablet_width);
+			margin: 0 auto;
 
-		.experience {
-			flex-basis: 100%;
+			h2 {
+				border-bottom: 1px solid $border_color;
+			}
+
+			dl {
+				margin-top: 30px;
+				padding: 0 30px;
+			}
 		}
 	}
+}
+
+
 }
 
 @media screen and (max-width: 540px) {

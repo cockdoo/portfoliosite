@@ -1,30 +1,48 @@
 
 // color
 $deep_blue: #031418;
-$text_color: #4A4A4A;
-$border_color: #E0E0E0;
-$bg_gray: #F6F6F6;
 $orange: #EC9B52;
+$gray: #F6F6F6;
 
-// font-size
-$font_base_size: 12px;
+$text_color: #4A4A4A;
+$subtext_color: #676767;
+$border_color: #E0E0E0;
+
 
 // font-familiy
-$serif: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-$sanssans: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+$sans-serif: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$serif: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 
 //size
 $pc_width: 940px;
+$tablet_width: 768px;
+$sp_width: 540px;
+
 $header_height: 40px;
+
+
+html,body {
+	font-size: 14px;
+	font-family: $sans-serif;
+}
 
 a {
 	text-decoration: none;
 }
 
-@mixin heding3() {
-	font-size: 14px;
+@mixin heading_bg() {
+	height: 180px;
+	flex-basis: 100%;
+	background-size: 1300px auto;
+	background-position: 50% 80%;
+}
+
+@mixin h1_sub() {
+	font-size: 30px;
 	font-weight: bold;
-	height: 20px;
+	color: #fff;
+	line-height: 180px;
+	text-align: center;
 }
 
 @mixin container() {
@@ -35,3 +53,13 @@ a {
 	margin: 0 auto;
 	margin-top: $header_height;
 }
+
+
+/*
+
+Break Point
+940px
+768px
+540px
+
+*/

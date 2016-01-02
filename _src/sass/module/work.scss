@@ -1,17 +1,14 @@
 
 @import "../config/config";
 
-$about_pc_width: 940px;
-
 @mixin holder($ratio) {
 	padding: 40px 0;
-	// width: $about_pc_width/$ratio;
-	max-width: $about_pc_width/$ratio;
+	max-width: $pc_width/$ratio;
 }
 
 .work-container {
 	@include container();
-	max-width: $about_pc_width;
+	max-width: $pc_width;
 
 /* Title */
 	.title {
@@ -66,7 +63,7 @@ $about_pc_width: 940px;
 			border-top: solid 1px $border_color;
 
 			@mixin holder() {
-				background: $bg_gray;
+				background: $gray;
 				width: 47%;
 				display: inline-block;
 				border-radius: 4px;
@@ -116,7 +113,7 @@ $about_pc_width: 940px;
 		margin-left: auto;
 
 		dl {
-			background: $bg_gray;
+			background: $gray;
 			border-radius: 4px;
 			padding: 25px 20px;
 		}
@@ -167,7 +164,7 @@ $about_pc_width: 940px;
 	}
 	
 	.outline {
-		background: $bg_gray;
+		background: $gray;
 		flex-basis: 50%;
 
 		.holder {
@@ -200,7 +197,7 @@ $about_pc_width: 940px;
 		}
 	}
 	.detail {
-		background: $bg_gray;
+		background: $gray;
 		flex-basis: 50%;
 
 		.holder {
@@ -209,6 +206,12 @@ $about_pc_width: 940px;
 
 			
 		}
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.work-container {
+
 	}
 }
 
