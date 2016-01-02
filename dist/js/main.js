@@ -1,7 +1,7 @@
 
 var heading_bg, top_bg;
 var heading_bg_bottom, top_bg_bottom;
-var heading_bgPosition_y = 67,
+var heading_bgPosition_y = 80,
 		top_bgPosition_y = 50;
 
 $(document).ready(function(){
@@ -31,8 +31,8 @@ window.onscroll = function(){
 	var scrolled = $(this).scrollTop();
 
 	if (scrolled >= 0 && scrolled < heading_bg_bottom && heading_bg) {
-		var num = heading_bgPosition_y - 20*scrolled/heading_bg_bottom;
-		heading_bg.style.backgroundPosition = "50%" + num + "%";
+		var num = heading_bgPosition_y - 50*scrolled/heading_bg_bottom;
+		heading_bg.style.backgroundPosition = "0%" + num + "%";
 	};
 
 	if (scrolled >= 0 && scrolled < top_bg_bottom && top_bg) {

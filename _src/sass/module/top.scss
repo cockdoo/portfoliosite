@@ -7,7 +7,7 @@
 		height: 450px;
 		width: 100%;
 		
-		background-image: url(../img/bg_top05.png);
+		background-image: url(../img/bg_top.jpg);
 		background-size: 1300px auto;
 		background-position: 100% 50%;
 		// background-size: cover;
@@ -17,7 +17,7 @@
 		
 		.overlay {
 			position: absolute;
-			background: rgba(#000, 0.2);
+			background: rgba(#000, 0.0);
 			width: 100%;
 			height: 100%;
 		}
@@ -142,7 +142,7 @@
 			opacity: 1.0;
 		}
 	}
-	.more {
+	a.more {
 		display: block;
 		margin: 40px auto 0;
 		background: $deep_blue;

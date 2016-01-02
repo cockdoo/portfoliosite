@@ -1,7 +1,7 @@
 
 @import "../config/config";
 
-$about_pc_width: 930px;
+$about_pc_width: 940px;
 
 @mixin holder($ratio) {
 	padding: 40px 0;
@@ -11,39 +11,160 @@ $about_pc_width: 930px;
 
 .work-container {
 	@include container();
+	max-width: $about_pc_width;
 
-/*   Heading  */
+/* Title */
+	.title {
+		margin-top: 30px;
 
-	#heading_bg {
-		height: 180px;
-		flex-basis: 100%;
-		background: url(../img/bg_about.jpg);
-		background-position: 50% 67%;
-
-		h2 {
-			font-size: 30px;
-			font-weight: bold;
-			color: #fff;
-			line-height: 180px;
-			text-align: center;
-			background: rgba(#000, 0.20);
-		}
-	}
-	.main {
-		width: 100%;
-
-		h4 {
+		h1 {
 			font-size: 24px;
 			font-weight: bold;
-			margin: 20px 40px 10px;
 		}
+		.subtitle {
+			font-size: 18px;
+			color: #777;
+		}
+	}
 
-		ul {
-			
+/* Main */
+
+	.main {
+		flex-basis: 620px;
+		
+		.article {
+			img {
+				width: 100%;
+				margin: 10px 0;
+			}		
+			p {
+				font-size: 14px;
+				line-height: 2.0em;
+				margin-bottom: 20px;
+			}			
+		}
+		a.back {
+			display: block;
+			margin: 40px auto 0;
+			background: $deep_blue;
+			color: #fff;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+			text-align: center;
+			border-radius: 4px;
+		}
+		a.back:hover {
+			opacity: 0.9;
+		}
+		.paging {
+			margin-top: 40px;
+			padding-top: 20px;
+			display: flex;
+			margin-bottom: 50px;
+			border-top: solid 1px $border_color;
+
+			@mixin holder() {
+				background: $bg_gray;
+				width: 47%;
+				display: inline-block;
+				border-radius: 4px;
+				overflow: hidden;
+				position: relative;
+
+				img.thumb {
+					width: 100%;
+				}
+				p {
+					text-align: center;
+					font-size: 14px;
+					font-weight: bold;
+					color: #5C5C5C;
+					margin: 10px 0;
+				}
+			}
+			@mixin arrow() {
+				width: 12px;
+				height: auto;
+				position: absolute;
+				bottom: 10px;
+			}
+			a.prev {
+				@include holder();
+
+				.arrow_prev {
+					@include arrow();
+					left: 15px;
+				}
+			}
+			a.next {
+				@include holder();
+				margin-left: auto;
+
+				.arrow_next {
+					@include arrow();
+					right: 15px;
+				}
+			}
 		}
 	}
 
 /*  Information  */
+	.information {
+		flex-basis: 290px;
+		margin-left: auto;
+
+		dl {
+			background: $bg_gray;
+			border-radius: 4px;
+			padding: 25px 20px;
+		}
+		dt {
+			font-size: 11px;
+			font-weight: bold;
+		}
+		dt:first-child {
+			margin-top: 0px;
+		}
+		dd {
+			font-size: 14px;
+			margin: 0px 0 15px;
+			display: inline-block;
+
+			.members {
+
+			}
+			.role {
+				font-size: 10px;
+				margin: -2px 0 5px;
+			}
+			.month {
+			}
+			.term {
+				font-size: 10px;
+				margin-top: -2px;
+			}
+		}
+		a {
+			display: inline-block;
+			padding: 15px 65px;
+			background: $orange;
+			color: #fff;
+			margin-top: 10px;
+			border-radius: 4px;
+			font-size: 14px;
+			font-weight: bold;
+			box-shadow: 0px 2px 0px #CACACA;
+			transition: opacity 0.1s ease;
+		}
+		a:hover {
+			opacity: 0.9;
+		}
+		a:active {
+			box-shadow: none;
+		}
+	}
 	
 	.outline {
 		background: $bg_gray;
@@ -86,34 +207,7 @@ $about_pc_width: 930px;
 			@include holder(2);
 			margin-right: auto;
 
-			dl {
-				margin-left: 40px;
-			}
-			dt {
-				font-size: 11px;
-				font-weight: bold;
-			}
-			dt:first-child {
-				margin-top: 0px;
-			}
-			dd {
-				font-size: 14px;
-				margin: 0px 0 15px;
-
-				.members {
-
-				}
-				.role {
-					font-size: 10px;
-					margin: -2px 0 5px;
-				}
-				.month {
-				}
-				.term {
-					font-size: 10px;
-					margin-top: -2px;
-				}
-			}
+			
 		}
 	}
 }
