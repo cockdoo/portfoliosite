@@ -25,8 +25,8 @@ $about_pc_width: 700px;
 		height: 180px;
 		flex-basis: 100%;
 		background: url(../img/bg_works.jpg);
-		background-size: 1400px auto;
-		background-position: 0% 70%;
+		background-size: 1300px auto;
+		background-position: 50% 80%;
 
 		h2 {
 			font-size: 30px;
@@ -34,7 +34,9 @@ $about_pc_width: 700px;
 			color: #fff;
 			line-height: 180px;
 			text-align: center;
-			background: rgba(#000, 0.20);
+			background: rgba(#000, 0.00);
+
+			text-shadow: 0 0 4px rgba(#000, 0.5);
 		}
 	}
 }

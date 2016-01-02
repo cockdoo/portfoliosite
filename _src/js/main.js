@@ -32,7 +32,7 @@ window.onscroll = function(){
 
 	if (scrolled >= 0 && scrolled < heading_bg_bottom && heading_bg) {
 		var num = heading_bgPosition_y - 50*scrolled/heading_bg_bottom;
-		heading_bg.style.backgroundPosition = "0%" + num + "%";
+		heading_bg.style.backgroundPosition = "50%" + num + "%";
 	};
 
 	if (scrolled >= 0 && scrolled < top_bg_bottom && top_bg) {
