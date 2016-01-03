@@ -9,7 +9,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 
 /*
 YUI 3.18.1 (build f7e7bcb)
@@ -82,7 +82,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 .about-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,7 +92,7 @@ Break Point
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  color: #4A4A4A;
+  color: #595A5D;
   margin: 0 auto;
   margin-top: 40px;
   /*   Heading  */
@@ -108,16 +108,23 @@ Break Point
             flex-basis: 100%;
     background-size: 1300px auto;
     background-position: 50% 80%; }
+    @media screen and (min-width: 1300px) {
+      .about-container #heading_bg {
+        background-size: cover; } }
+    @media screen and (max-width: 768px) {
+      .about-container #heading_bg {
+        height: 150px;
+        background-size: 900px auto; } }
     .about-container #heading_bg h1 {
       font-size: 30px;
-      font-weight: bold;
       color: #fff;
       line-height: 180px;
       text-align: center;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
       background: rgba(0, 0, 0, 0.1); }
-  @media screen and (min-width: 1300px) {
-    .about-container #heading_bg {
-      background-size: cover; } }
+      @media screen and (max-width: 768px) {
+        .about-container #heading_bg h1 {
+          line-height: 150px; } }
   .about-container .plofile {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -126,8 +133,13 @@ Break Point
       padding: 40px 0;
       width: 700px;
       margin: 0 auto; }
+      @media screen and (max-width: 768px) {
+        .about-container .plofile .holder {
+          width: 490px; } }
+      @media screen and (max-width: 540px) {
+        .about-container .plofile .holder {
+          width: 100%; } }
       .about-container .plofile .holder h2 {
-        font-size: 14px;
         font-weight: bold;
         height: 20px;
         padding-bottom: 2px;
@@ -140,13 +152,36 @@ Break Point
         display: inline-block;
         vertical-align: top;
         margin-left: 60px;
-        margin-top: 15px; }
+        margin-top: 14px; }
       .about-container .plofile .holder dt {
         margin-top: 10px;
-        font-size: 11px; }
+        font-size: 73%;
+        color: #66666C; }
       .about-container .plofile .holder dd {
-        font-size: 14px;
-        font-weight: bold; }
+        font-weight: bold;
+        line-height: 1.6em; }
+        .about-container .plofile .holder dd p.pc_inline {
+          display: inline; }
+  @media screen and (max-width: 768px) {
+    .about-container .plofile .holder img {
+      width: 180px;
+      height: 180px;
+      margin-top: 50px; }
+    .about-container .plofile .holder dl {
+      width: auto;
+      margin-left: 35px; }
+    .about-container .plofile .holder dd p.pc_inline {
+      display: block; } }
+  @media screen and (max-width: 768px) {
+    .about-container .plofile .holder img {
+      width: 180px;
+      height: 180px;
+      margin-top: 50px; }
+    .about-container .plofile .holder dl {
+      width: auto;
+      margin-left: 35px; }
+    .about-container .plofile .holder dd p.pc_inline {
+      display: block; } }
   .about-container .skills {
     background: #F6F6F6;
     -webkit-flex-basis: 50%;
@@ -156,8 +191,13 @@ Break Point
       padding: 40px 0;
       width: 350px;
       margin-left: auto; }
+      @media screen and (max-width: 768px) {
+        .about-container .skills .holder {
+          width: 245px; } }
+      @media screen and (max-width: 540px) {
+        .about-container .skills .holder {
+          width: 100%; } }
       .about-container .skills .holder h2 {
-        font-size: 14px;
         font-weight: bold;
         height: 20px; }
       .about-container .skills .holder dl {
@@ -226,12 +266,33 @@ Break Point
       padding: 0 20px; }
       .about-container .skills .holder {
         padding: 40px 0;
-        width: 490px;
-        margin: 0 auto; }
+        width: 700px;
+        margin: 0 auto; } }
+    @media screen and (max-width: 768px) and (max-width: 768px) {
+      .about-container .skills .holder {
+        width: 490px; } }
+    @media screen and (max-width: 768px) and (max-width: 540px) {
+      .about-container .skills .holder {
+        width: 100%; } }
+  @media screen and (max-width: 768px) {
         .about-container .skills .holder h2 {
           border-bottom: 1px solid #E0E0E0; }
-        .about-container .skills .holder dl {
-          padding: 0 30px; } }
+        .about-container .skills .holder dt {
+          -webkit-box-flex: 40%;
+          -webkit-flex: 40%;
+              -ms-flex: 40%;
+                  flex: 40%;
+          padding-left: 10%; }
+        .about-container .skills .holder dd {
+          -webkit-box-flex: 50%;
+          -webkit-flex: 50%;
+              -ms-flex: 50%;
+                  flex: 50%;
+          margin-right: 0; }
+        .about-container .skills .holder dt:nth-of-type(even) {
+          background: #F6F6F6; }
+        .about-container .skills .holder dd:nth-of-type(even) {
+          background: #F6F6F6; } }
   .about-container .experience {
     background: #F6F6F6;
     -webkit-flex-basis: 50%;
@@ -242,12 +303,17 @@ Break Point
       width: 350px;
       margin-right: auto;
       margin-left: 10px; }
+      @media screen and (max-width: 768px) {
+        .about-container .experience .holder {
+          width: 245px; } }
+      @media screen and (max-width: 540px) {
+        .about-container .experience .holder {
+          width: 100%; } }
       .about-container .experience .holder h2 {
-        font-size: 14px;
         font-weight: bold;
         height: 20px; }
       .about-container .experience .holder dl {
-        margin-top: 15px;
+        margin-top: 10px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -259,26 +325,25 @@ Break Point
         -webkit-flex-basis: 50%;
             -ms-flex-preferred-size: 50%;
                 flex-basis: 50%;
-        height: 45px; }
+        height: 30px;
+        padding: 10px 0; }
         .about-container .experience .holder dt .term {
-          font-size: 10px;
-          margin-top: -2px;
-          color: #676767; }
+          font-size: 70%;
+          color: #66666C; }
       .about-container .experience .holder dd {
         -webkit-flex-basis: 50%;
             -ms-flex-preferred-size: 50%;
                 flex-basis: 50%;
-        height: 45px; }
+        height: 30px;
+        padding: 10px 0; }
         .about-container .experience .holder dd .company {
           vertical-align: top;
-          font-size: 14px;
-          color: #4A4A4A; }
+          color: #595A5D; }
         .about-container .experience .holder dd .company:hover {
           text-decoration: underline; }
         .about-container .experience .holder dd .role {
-          font-size: 10px;
-          margin-top: -2px;
-          color: #676767; }
+          font-size: 70%;
+          color: #66666C; }
   @media screen and (max-width: 768px) {
     .about-container .experience {
       -webkit-flex-basis: 100%;
@@ -288,13 +353,33 @@ Break Point
       padding: 0 20px; }
       .about-container .experience .holder {
         padding: 40px 0;
-        width: 490px;
-        margin: 0 auto; }
+        width: 700px;
+        margin: 0 auto; } }
+    @media screen and (max-width: 768px) and (max-width: 768px) {
+      .about-container .experience .holder {
+        width: 490px; } }
+    @media screen and (max-width: 768px) and (max-width: 540px) {
+      .about-container .experience .holder {
+        width: 100%; } }
+  @media screen and (max-width: 768px) {
         .about-container .experience .holder h2 {
           border-bottom: 1px solid #E0E0E0; }
-        .about-container .experience .holder dl {
-          margin-top: 30px;
-          padding: 0 30px; } }
+        .about-container .experience .holder dt {
+          -webkit-box-flex: 42%;
+          -webkit-flex: 42%;
+              -ms-flex: 42%;
+                  flex: 42%;
+          padding-left: 10%; }
+        .about-container .experience .holder dd {
+          -webkit-box-flex: 48%;
+          -webkit-flex: 48%;
+              -ms-flex: 48%;
+                  flex: 48%;
+          margin-right: 0; }
+        .about-container .experience .holder dt:nth-of-type(even) {
+          background: #F6F6F6; }
+        .about-container .experience .holder dd:nth-of-type(even) {
+          background: #F6F6F6; } }
   .about-container .about_this_site {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -305,14 +390,19 @@ Break Point
       width: 700px;
       height: 100%;
       margin: 0 auto; }
+      @media screen and (max-width: 768px) {
+        .about-container .about_this_site .holder {
+          width: 490px; } }
+      @media screen and (max-width: 540px) {
+        .about-container .about_this_site .holder {
+          width: 100%; } }
       .about-container .about_this_site .holder h2 {
-        font-size: 14px;
         font-weight: bold;
         height: 20px; }
       .about-container .about_this_site .holder .description {
-        margin-top: 15px; }
+        margin-top: 12px; }
         .about-container .about_this_site .holder .description p {
-          font-size: 13px;
+          font-size: 90%;
           margin-top: 10px;
           line-height: 1.8em; }
           .about-container .about_this_site .holder .description p a {
@@ -327,8 +417,6 @@ Break Point
       background: none;
       padding: 0 20px; }
       .about-container .about_this_site .holder {
-        padding: 40px 0;
-        width: 490px;
         margin: 0 auto; }
         .about-container .about_this_site .holder h2 {
           border-bottom: 1px solid #E0E0E0; }
@@ -348,10 +436,10 @@ Break Point
 768px
 540px
 
-*/
+// */
 /* Body */
 html, body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Roboto', 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif; }
 
 /*  Header  */
@@ -425,7 +513,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 .contact-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -435,26 +523,35 @@ Break Point
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  color: #4A4A4A;
+  color: #595A5D;
   margin: 0 auto;
   margin-top: 40px;
   /*   Heading  */
   /*  Form  */ }
   .contact-container #heading_bg {
+    background: url(../img/bg_contact.jpg);
     height: 180px;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    background: url(../img/bg_contact.jpg);
     background-size: 1300px auto;
     background-position: 50% 80%; }
-    .contact-container #heading_bg h2 {
+    @media screen and (min-width: 1300px) {
+      .contact-container #heading_bg {
+        background-size: cover; } }
+    @media screen and (max-width: 768px) {
+      .contact-container #heading_bg {
+        height: 150px;
+        background-size: 900px auto; } }
+    .contact-container #heading_bg h1 {
       font-size: 30px;
-      font-weight: bold;
       color: #fff;
       line-height: 180px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.2); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      @media screen and (max-width: 768px) {
+        .contact-container #heading_bg h1 {
+          line-height: 150px; } }
   .contact-container #mail {
     max-width: 700px;
     margin: 30px auto;
@@ -491,7 +588,7 @@ Break Point
         background: #fafafa;
         font-size: 14px;
         padding: 0 5px;
-        color: #4A4A4A; }
+        color: #595A5D; }
       .contact-container #mail dd input:focus {
         outline-color: #EC9B52;
         outline-width: 3px; }
@@ -503,7 +600,7 @@ Break Point
         background: #fafafa;
         font-size: 14px;
         padding: 0 5px;
-        color: #4A4A4A; }
+        color: #595A5D; }
       .contact-container #mail dd textarea:focus {
         outline-color: #EC9B52;
         outline-width: 3px; }
@@ -694,7 +791,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 .top-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -704,7 +801,7 @@ Break Point
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  color: #4A4A4A;
+  color: #595A5D;
   margin: 0 auto;
   margin-top: 40px; }
   .top-container #top_bg {
@@ -847,7 +944,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 .work-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -857,7 +954,7 @@ Break Point
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  color: #4A4A4A;
+  color: #595A5D;
   margin: 0 auto;
   margin-top: 40px;
   max-width: 940px;
@@ -880,7 +977,6 @@ Break Point
       width: 100%;
       margin: 10px 0; }
     .work-container .main .article p {
-      font-size: 14px;
       line-height: 2.0em;
       margin-bottom: 20px; }
     .work-container .main a.back {
@@ -891,7 +987,6 @@ Break Point
       width: 200px;
       height: 40px;
       line-height: 40px;
-      font-size: 14px;
       text-align: center;
       border-radius: 4px; }
     .work-container .main a.back:hover {
@@ -916,7 +1011,6 @@ Break Point
           width: 100%; }
         .work-container .main .paging a.prev p {
           text-align: center;
-          font-size: 14px;
           font-weight: bold;
           color: #5C5C5C;
           margin: 10px 0; }
@@ -938,7 +1032,6 @@ Break Point
           width: 100%; }
         .work-container .main .paging a.next p {
           text-align: center;
-          font-size: 14px;
           font-weight: bold;
           color: #5C5C5C;
           margin: 10px 0; }
@@ -963,7 +1056,6 @@ Break Point
     .work-container .information dt:first-child {
       margin-top: 0px; }
     .work-container .information dd {
-      font-size: 14px;
       margin: 0px 0 15px;
       display: inline-block; }
       .work-container .information dd .role {
@@ -979,7 +1071,6 @@ Break Point
       color: #fff;
       margin-top: 10px;
       border-radius: 4px;
-      font-size: 14px;
       font-weight: bold;
       box-shadow: 0px 2px 0px #CACACA;
       -webkit-transition: opacity 0.1s ease;
@@ -998,10 +1089,8 @@ Break Point
       max-width: 470px;
       margin-left: auto; }
       .work-container .outline .holder .subtitle {
-        font-size: 14px;
         font-weight: bold; }
       .work-container .outline .holder .description {
-        font-size: 14px;
         margin-top: 16px;
         line-height: 1.8em; }
       .work-container .outline .holder a {
@@ -1011,7 +1100,6 @@ Break Point
         color: #fff;
         margin-top: 30px;
         border-radius: 4px;
-        font-size: 14px;
         font-weight: bold; }
       .work-container .outline .holder a:hover {
         opacity: 0.9; }
@@ -1036,7 +1124,7 @@ Break Point
 768px
 540px
 
-*/
+// */
 .works-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1046,7 +1134,7 @@ Break Point
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  color: #4A4A4A;
+  color: #595A5D;
   margin: 0 auto;
   margin-top: 40px;
   /*   Heading  */ }
@@ -1058,11 +1146,19 @@ Break Point
             flex-basis: 100%;
     background-size: 1300px auto;
     background-position: 50% 80%; }
-    .works-container #heading_bg h2 {
+    @media screen and (min-width: 1300px) {
+      .works-container #heading_bg {
+        background-size: cover; } }
+    @media screen and (max-width: 768px) {
+      .works-container #heading_bg {
+        height: 150px;
+        background-size: 900px auto; } }
+    .works-container #heading_bg h1 {
       font-size: 30px;
-      font-weight: bold;
       color: #fff;
       line-height: 180px;
       text-align: center;
-      background: transparent;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      @media screen and (max-width: 768px) {
+        .works-container #heading_bg h1 {
+          line-height: 150px; } }

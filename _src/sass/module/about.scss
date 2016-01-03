@@ -4,13 +4,19 @@
 $about_pc_width: 700px;
 $about_tablet_width: 490px;
 
-@mixin holder($width) {
+@mixin holder($ratio) {
 	padding: 40px 0;
-	width: $width;
+
+	width: $about_pc_width/$ratio;
+	@media screen and (max-width: 768px) {
+		width: $about_tablet_width/$ratio;
+	}
+	@media screen and (max-width: 540px) {
+		width: 100%;
+	}
 }
 
 @mixin h2() {
-	font-size: 14px;
 	font-weight: bold;
 	height: 20px;
 }
@@ -30,11 +36,6 @@ $about_tablet_width: 490px;
 		}
 	}
 
-@media screen and (min-width: 1300px) {
-	#heading_bg {
-		background-size: cover;
-	}
-}
 
 /*  Profile  */
 
@@ -42,7 +43,7 @@ $about_tablet_width: 490px;
 		flex-basis: 100%;
 
 		.holder {
-			@include holder($about_pc_width);
+			@include holder(1);
 			margin: 0 auto;
 
 			h2 {
@@ -59,20 +60,71 @@ $about_tablet_width: 490px;
 				display: inline-block;
 				vertical-align: top;
 				margin-left: 60px;
-				margin-top: 15px;
+				margin-top: 14px;
 			}
 			dt {
 				margin-top: 10px;
-				font-size: 11px;
+				font-size: 73%;
+				color: $subtext_color;
 			}
 			dd {
-				font-size: 14px;
 				font-weight: bold;
+				line-height: 1.6em;
+
+				p.pc_inline {
+					display: inline;
+				}
 			}
 		}
 	}
 
+@media screen and (max-width: 768px) {
+	.plofile {
 
+		.holder {
+
+			img {
+				width: 180px;
+				height: 180px;
+				margin-top: 50px;
+			}
+			dl {
+				width: auto;
+				margin-left: 35px;
+			}
+			dd {
+
+				p.pc_inline {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.plofile {
+
+		.holder {
+
+			img {
+				width: 180px;
+				height: 180px;
+				margin-top: 50px;
+			}
+			dl {
+				width: auto;
+				margin-left: 35px;
+			}
+			dd {
+
+				p.pc_inline {
+					display: block;
+				}
+			}
+		}
+	}
+}
 /*  Skills  */
 
 	.skills {
@@ -80,7 +132,7 @@ $about_tablet_width: 490px;
 		flex-basis: 50%;
 
 		.holder {
-			@include holder($about_pc_width/2);
+			@include holder(2);
 			margin-left: auto;
 
 			h2 {
@@ -141,15 +193,25 @@ $about_tablet_width: 490px;
 		padding: 0 20px;
 
 		.holder {
-			@include holder($about_tablet_width);
+			@include holder(1);
 			margin: 0 auto;
 
 			h2 {
 				border-bottom: 1px solid $border_color;
 			}
-
-			dl {
-				padding: 0 30px;
+			dt {
+				flex: 40%;
+				padding-left: 10%;
+			}
+			dd {
+				flex: 50%;
+				margin-right: 0;
+			}
+			dt:nth-of-type(even) {
+				background: $gray;
+			}
+			dd:nth-of-type(even) {
+				background: $gray;
 			}
 		}
 	}
@@ -163,7 +225,7 @@ $about_tablet_width: 490px;
 		flex-basis: 50%;
 
 		.holder {
-			@include holder($about_pc_width/2);
+			@include holder(2);
 			margin-right: auto;
 			margin-left: 10px;
 
@@ -172,39 +234,38 @@ $about_tablet_width: 490px;
 			}
 
 			dl {
-				margin-top: 15px;
+				margin-top: 10px;
 				display: flex;
 				flex-wrap: wrap;
 			}
+			$list_height: 30px;
 			dt {
 				flex-basis: 50%;
-				height: 45px;
+				height: $list_height;
+				padding: 10px 0;
 
 				.month {
 					
 				}
 				.term {
-					font-size: 10px;
-					margin-top: -2px;
+					font-size: 70%;
 					color: $subtext_color;
 				}
 			}
 			dd {
 				flex-basis: 50%;
-				height: 45px;
-
+				height: $list_height;
+				padding: 10px 0;
 
 				.company {
 					vertical-align: top;
-					font-size: 14px;
 					color: $text_color;
 				}
 				.company:hover {
 					text-decoration: underline;
 				}
 				.role {
-					font-size: 10px;
-					margin-top: -2px;
+					font-size: 70%;
 					color: $subtext_color;
 				}
 			}
@@ -218,16 +279,25 @@ $about_tablet_width: 490px;
 		padding: 0 20px;
 
 		.holder {
-			@include holder($about_tablet_width);
+			@include holder(1);
 			margin: 0 auto;
 
 			h2 {
 				border-bottom: 1px solid $border_color;
 			}
-
-			dl {
-				margin-top: 30px;
-				padding: 0 30px;
+			dt {
+				flex: 42%;
+				padding-left: 10%;
+			}
+			dd {
+				flex: 48%;
+				margin-right: 0;
+			}
+			dt:nth-of-type(even) {
+				background: $gray;
+			}
+			dd:nth-of-type(even) {
+				background: $gray;
 			}
 		}
 	}
@@ -241,7 +311,7 @@ $about_tablet_width: 490px;
 		padding-bottom: 20px;
 
 		.holder {
-			@include holder($about_pc_width);
+			@include holder(1);
 			height: 100%;
 			margin: 0 auto;
 
@@ -250,10 +320,10 @@ $about_tablet_width: 490px;
 			}
 
 			.description {
-				margin-top: 15px;
+				margin-top: 12px;
 
 				p {
-					font-size: 13px;
+					font-size: 90%;
 					margin-top: 10px;
 					line-height: 1.8em;
 
@@ -275,7 +345,6 @@ $about_tablet_width: 490px;
 		padding: 0 20px;
 
 		.holder {
-			@include holder($about_tablet_width);
 			margin: 0 auto;
 
 			h2 {

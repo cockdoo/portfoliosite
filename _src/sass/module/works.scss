@@ -10,15 +10,8 @@
 		background: url(../img/bg_works.jpg);
 		@include heading_bg();
 
-		h2 {
-			font-size: 30px;
-			font-weight: bold;
-			color: #fff;
-			line-height: 180px;
-			text-align: center;
-			background: rgba(#000, 0.00);
-
-			text-shadow: 0 0 4px rgba(#000, 0.5);
+		h1 {
+			@include h1_sub();
 		}
 	}
 }
