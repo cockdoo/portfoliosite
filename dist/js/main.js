@@ -12,7 +12,7 @@ $(document).ready(function(){
   	// change_top_bg();
   };
 
-  $('.bxslider').bxSlider();
+  $('#menu').slicknav();
 });
 
 function getElement() {

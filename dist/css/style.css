@@ -457,11 +457,11 @@ header {
   top: 0px;
   width: 100%;
   z-index: 99; }
-  header nav {
+  header nav.global_nav {
     max-width: 940px;
     margin: 0 auto;
     height: 40px; }
-    header nav ul {
+    header nav.global_nav ul {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -470,7 +470,7 @@ header {
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
-    header nav li a {
+    header nav.global_nav li a {
       display: block;
       font-size: 13px;
       width: 100px;
@@ -481,8 +481,14 @@ header {
       -webkit-transition: background 0.1s ease;
       transition: background 0.1s ease;
       border-radius: 4px; }
-    header nav li a:hover {
+    header nav.global_nav li a:hover {
       background: #4A5153; }
+
+@media screen and (max-width: 540px) {
+  header nav.global_nav {
+    display: none; }
+  header nav#slicknav {
+    width: 100%; } }
 
 /*  Footer  */
 footer {
@@ -495,20 +501,33 @@ footer {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
       footer nav ul li a {
         display: inline-block;
-        color: #97A8CB;
-        font-size: 14px;
+        color: #CCCDD0;
         width: 100px;
         text-align: center; }
       footer nav ul li a:hover {
         text-decoration: underline; }
   footer .copyright {
     color: #fff;
-    font-size: 11px;
+    font-size: 73%;
     text-align: center;
     padding-bottom: 10px; }
+
+@media screen and (max-width: 540px) {
+  footer nav {
+    width: 100%;
+    padding: 5px 0; }
+    footer nav ul li {
+      width: 50%; }
+      footer nav ul li a {
+        width: auto;
+        display: block;
+        padding: 15px 20px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
@@ -794,6 +813,176 @@ Break Point
   display: block;
   font-size: .85em;
   padding: 10px; }
+
+/*
+    Mobile Menu Core Style
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+a {
+  text-decoration: none; }
+
+/*
+
+Break Point
+940px
+768px
+540px
+
+// */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer; }
+
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left; }
+
+.slicknav_menu .slicknav_icon {
+  float: left;
+  margin: 0.188em 0 0 0.438em; }
+
+.slicknav_menu .slicknav_no-text {
+  margin: 0; }
+
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em; }
+
+.slicknav_nav {
+  clear: both; }
+
+.slicknav_nav ul,
+.slicknav_nav li {
+  display: block; }
+
+.slicknav_nav .slicknav_arrow {
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em; }
+
+.slicknav_nav .slicknav_item {
+  cursor: pointer; }
+
+.slicknav_nav .slicknav_row {
+  display: block; }
+
+.slicknav_nav a {
+  display: block; }
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+  display: inline; }
+
+.slicknav_menu:before,
+.slicknav_menu:after {
+  content: " ";
+  display: table; }
+
+.slicknav_menu:after {
+  clear: both; }
+
+/* IE6/7 support */
+.slicknav_menu {
+  *zoom: 1; }
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+.slicknav_menu {
+  font-size: 16px; }
+
+/* Button */
+.slicknav_btn {
+  margin: 2px 10px 10px;
+  text-decoration: none;
+  border-radius: 4px; }
+
+.slicknav_btn:after {
+  content: "MENU";
+  color: #fff;
+  font-size: 8px;
+  position: absolute;
+  top: 20px;
+  left: 5px; }
+
+/* Button Text */
+.slicknav_menu .slicknav_menutxt {
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000; }
+
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #fff; }
+
+.slicknav_menu {
+  padding: 5px; }
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; }
+
+.slicknav_nav, .slicknav_nav ul {
+  list-style: none;
+  overflow: hidden; }
+
+.slicknav_nav ul {
+  padding: 0;
+  margin: 0 0 0 20px; }
+
+.slicknav_nav .slicknav_row {
+  padding: 5px 10px;
+  margin: 2px 5px; }
+
+.slicknav_nav a {
+  padding: 15px 15px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #fff; }
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0; }
+
+.slicknav_nav .slicknav_row:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff; }
+
+.slicknav_nav a:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #222; }
+
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 15px; }
+
+#menu {
+  display: none; }
+
+.slicknav_menu {
+  display: none; }
+
+@media screen and (max-width: 540px) {
+  #menu {
+    display: none; }
+  .slicknav_menu {
+    display: block; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
