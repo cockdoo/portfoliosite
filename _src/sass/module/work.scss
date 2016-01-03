@@ -1,26 +1,34 @@
 
 @import "../config/config";
 
-@mixin holder($ratio) {
-	padding: 40px 0;
-	max-width: $pc_width/$ratio;
-}
 
 .work-container {
 	@include container();
 	max-width: $pc_width;
+
+	@media screen and (max-width: 940px) {
+		max-width: 620px;
+		padding: 0 20px;
+	}
+	@media screen and (max-width: 768px) {
+		max-width: 520px;
+	}
+	@media screen and (max-width: 540px) {
+		width: auto;
+		padding: 0 10px;
+	}
 
 /* Title */
 	.title {
 		margin-top: 30px;
 
 		h1 {
-			font-size: 24px;
+			font-size: 160%;
 			font-weight: bold;
 		}
 		.subtitle {
-			font-size: 18px;
-			color: #777;
+			font-size: 120%;
+			color: $subtext_color;
 		}
 	}
 
@@ -28,6 +36,10 @@
 
 	.main {
 		flex-basis: 620px;
+
+		@media screen and (max-width: 940px) {
+			width: 100%;
+		}
 		
 		.article {
 			img {
@@ -37,70 +49,10 @@
 			p {
 				line-height: 2.0em;
 				margin-bottom: 20px;
+			}
+			p:last-child {
+				margin-bottom: 0px;
 			}			
-		}
-		a.back {
-			display: block;
-			margin: 40px auto 0;
-			background: $deep_blue;
-			color: #fff;
-			width: 200px;
-			height: 40px;
-			line-height: 40px;
-			text-align: center;
-			border-radius: 4px;
-		}
-		a.back:hover {
-			opacity: 0.9;
-		}
-		.paging {
-			margin-top: 40px;
-			padding-top: 20px;
-			display: flex;
-			margin-bottom: 50px;
-			border-top: solid 1px $border_color;
-
-			@mixin holder() {
-				background: $gray;
-				width: 47%;
-				display: inline-block;
-				border-radius: 4px;
-				overflow: hidden;
-				position: relative;
-
-				img.thumb {
-					width: 100%;
-				}
-				p {
-					text-align: center;
-					font-weight: bold;
-					color: #5C5C5C;
-					margin: 10px 0;
-				}
-			}
-			@mixin arrow() {
-				width: 12px;
-				height: auto;
-				position: absolute;
-				bottom: 10px;
-			}
-			a.prev {
-				@include holder();
-
-				.arrow_prev {
-					@include arrow();
-					left: 15px;
-				}
-			}
-			a.next {
-				@include holder();
-				margin-left: auto;
-
-				.arrow_next {
-					@include arrow();
-					right: 15px;
-				}
-			}
 		}
 	}
 
@@ -109,14 +61,20 @@
 		flex-basis: 290px;
 		margin-left: auto;
 
+		@media screen and (max-width: 940px) {
+			flex-basis: 100%;
+			margin-top: 40px;
+		}
+
 		dl {
 			background: $gray;
 			border-radius: 4px;
 			padding: 25px 20px;
 		}
 		dt {
-			font-size: 11px;
+			font-size: 87%;
 			font-weight: bold;
+			margin: 5px 0 -5px;
 		}
 		dt:first-child {
 			margin-top: 0px;
@@ -129,20 +87,23 @@
 
 			}
 			.role {
-				font-size: 10px;
+				font-size: 70%;
+				color: $subtext_color;
 				margin: -2px 0 5px;
 			}
 			.month {
 			}
 			.term {
-				font-size: 10px;
+				font-size: 70%;
+				color: $subtext_color;
 				margin-top: -2px;
 			}
 		}
 		a {
-			display: inline-block;
+			display: block;
 			padding: 15px 65px;
 			background: $orange;
+			text-align: center;
 			color: #fff;
 			margin-top: 10px;
 			border-radius: 4px;
@@ -158,53 +119,81 @@
 		}
 	}
 	
-	.outline {
-		background: $gray;
-		flex-basis: 50%;
+	.back {
+		flex-basis: 620px;
 
-		.holder {
-			@include holder(2);
-			margin-left: auto;
-
-			.subtitle {
-				font-weight: bold;
-			}
-			.description {
-				margin-top: 16px;
-				line-height: 1.8em;
-			}
-
-			a {
-				display: inline-block;
-				padding: 15px 65px;
-				background: $orange;
-				color: #fff;
-				margin-top: 30px;
-				border-radius: 4px;
-				font-weight: bold;
-			}
-			a:hover {
-				opacity: 0.9;
-			}
+		a.back {
+			display: block;
+			margin: 40px auto 0;
+			background: $deep_blue;
+			color: #fff;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 4px;
+		}
+		a.back:hover {
+			opacity: 0.9;
 		}
 	}
-	.detail {
-		background: $gray;
-		flex-basis: 50%;
+	
 
-		.holder {
-			@include holder(2);
-			margin-right: auto;
+/* Paging */
+	.paging {
+		margin-top: 40px;
+		padding-top: 20px;
+		display: flex;
+		margin-bottom: 50px;
+		border-top: solid 1px $border_color;
+		flex-basis: 620px;
 
-			
+		@mixin holder() {
+			background: $gray;
+			width: 47%;
+			display: inline-block;
+			border-radius: 4px;
+			overflow: hidden;
+			position: relative;
+
+			img.thumb {
+				width: 100%;
+			}
+			p {
+				text-align: center;
+				font-weight: bold;
+				color: #5C5C5C;
+				margin: 10px 0;
+			}
+		}
+		@mixin arrow() {
+			width: 12px;
+			height: auto;
+			position: absolute;
+			bottom: 10px;
+		}
+		a.prev {
+			@include holder();
+
+			.arrow_prev {
+				@include arrow();
+				left: 15px;
+			}
+		}
+		a.next {
+			@include holder();
+			margin-left: auto;
+
+			.arrow_next {
+				@include arrow();
+				right: 15px;
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 940px) {
-	.work-container {
 
-	}
 }
 
 @media screen and (max-width: 768px) {
