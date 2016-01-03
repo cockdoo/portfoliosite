@@ -2,7 +2,7 @@
 var heading_bg, top_bg;
 var heading_bg_bottom, top_bg_bottom;
 var heading_bgPosition_y = 80,
-		top_bgPosition_y = 50;
+		top_bgPosition_y = 60;
 
 $(document).ready(function(){
   console.log('ready');
@@ -36,8 +36,8 @@ window.onscroll = function(){
 	};
 
 	if (scrolled >= 0 && scrolled < top_bg_bottom && top_bg) {
-		var num = top_bgPosition_y - 40*scrolled/top_bg_bottom;
-		top_bg.style.backgroundPosition = "100%" + num + "%";
+		var num = top_bgPosition_y - 50*scrolled/top_bg_bottom;
+		top_bg.style.backgroundPosition = "50%" + num + "%";
 	};
 }
 

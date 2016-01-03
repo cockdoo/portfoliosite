@@ -914,8 +914,9 @@ Break Point
   color: #fff;
   font-size: 8px;
   position: absolute;
-  top: 20px;
-  left: 5px; }
+  top: 18px;
+  left: 6px;
+  font-weight: bold; }
 
 /* Button Text */
 .slicknav_menu .slicknav_menutxt {
@@ -1013,14 +1014,22 @@ Break Point
     width: 100%;
     background-image: url(../img/bg_top.jpg);
     background-size: 1300px auto;
-    background-position: 100% 50%;
-    vertical-align: middle;
-    position: relative;
-    -webkit-transition: background-image 0.5s linear;
-    transition: background-image 0.5s linear; }
+    background-position: 50% 60%;
+    position: relative; }
+    @media screen and (min-width: 1300px) {
+      .top-container #top_bg {
+        background-size: cover; } }
+    @media screen and (max-width: 768px) {
+      .top-container #top_bg {
+        height: 350px;
+        background-size: 800px auto; } }
+    @media screen and (max-width: 540px) {
+      .top-container #top_bg {
+        height: 250px;
+        background-size: 600px auto; } }
     .top-container #top_bg .overlay {
       position: absolute;
-      background: transparent;
+      background: rgba(0, 0, 0, 0.2);
       width: 100%;
       height: 100%; }
     .top-container #top_bg .title-container {
@@ -1034,108 +1043,28 @@ Break Point
       margin: auto;
       text-align: center; }
       .top-container #top_bg .title-container h1 {
-        font-size: 40px;
+        font-size: 260%;
         color: #fff;
         text-align: center; }
       .top-container #top_bg .title-container .subtitle {
         color: #fff;
-        font-size: 12px;
+        font-size: 80%;
         letter-spacing: 0.4em;
         margin-top: -6px; }
       .top-container #top_bg .title-container .do {
         color: #fff;
-        font-size: 14px;
+        font-size: 93%;
         margin-top: 30px;
         letter-spacing: 0.2em; }
-
-/*  Works  */
-.works {
-  width: 100%;
-  padding: 50px 30px; }
-  .works ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .works ul li {
-      -webkit-flex-basis: 32%;
-          -ms-flex-preferred-size: 32%;
-              flex-basis: 32%;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 15px;
-      border-radius: 4px; }
-      .works ul li img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0px;
-        left: 0px; }
-      .works ul li .blur {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        opacity: 0.0;
-        -webkit-transition: opacity 0.1s ease;
-        transition: opacity 0.1s ease; }
-      .works ul li a {
-        opacity: 0.0;
-        -webkit-transition: opacity 0.1s ease;
-        transition: opacity 0.1s ease; }
-      .works ul li .overlay {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 84%;
-        height: 86%;
-        background: rgba(0, 0, 0, 0.55);
-        color: #fff;
-        padding: 7% 8%;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
-        .works ul li .overlay .title {
-          font-size: 15px;
-          font-weight: bold; }
-        .works ul li .overlay .subtitle {
-          margin-top: 2px;
-          font-size: 13px; }
-        .works ul li .overlay .separator {
-          margin: 15px 0 15px;
-          width: 35px;
-          height: 2px;
-          background: #fff; }
-        .works ul li .overlay .description {
-          font-size: 11px;
-          line-height: 1.8em; }
-    .works ul li:before {
-      content: "";
-      display: block;
-      padding: 32%; }
-    .works ul li:hover > a {
-      opacity: 1.0; }
-    .works ul li:hover > .blur {
-      opacity: 1.0; }
-  .works a.more {
-    display: block;
-    margin: 40px auto 0;
-    background: #031418;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 4px; }
-  .works .more:hover {
-    opacity: 0.8; }
+    @media screen and (max-width: 540px) {
+      .top-container #top_bg .title-container {
+        height: 50px; }
+        .top-container #top_bg .title-container h1 {
+          font-size: 200%; }
+        .top-container #top_bg .title-container .subtitle {
+          margin-top: 0px; }
+        .top-container #top_bg .title-container .do {
+          font-size: 85%; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
@@ -1373,3 +1302,92 @@ Break Point
         .works-container #heading_bg h1 {
           line-height: 100px;
           font-size: 160%; } }
+
+/*  Works  */
+.works {
+  width: 100%;
+  padding: 50px 30px; }
+  .works ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .works ul li {
+      -webkit-flex-basis: 32%;
+          -ms-flex-preferred-size: 32%;
+              flex-basis: 32%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 4px; }
+      .works ul li img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0px;
+        left: 0px; }
+      .works ul li .blur {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.0;
+        -webkit-transition: opacity 0.1s ease;
+        transition: opacity 0.1s ease; }
+      .works ul li a {
+        opacity: 0.0;
+        -webkit-transition: opacity 0.1s ease;
+        transition: opacity 0.1s ease; }
+      .works ul li .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 84%;
+        height: 86%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        padding: 7% 8%;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+        .works ul li .overlay .title {
+          font-size: 15px;
+          font-weight: bold; }
+        .works ul li .overlay .subtitle {
+          margin-top: 2px;
+          font-size: 13px; }
+        .works ul li .overlay .separator {
+          margin: 15px 0 15px;
+          width: 35px;
+          height: 2px;
+          background: #fff; }
+        .works ul li .overlay .description {
+          font-size: 11px;
+          line-height: 1.8em; }
+    .works ul li:before {
+      content: "";
+      display: block;
+      padding: 32%; }
+    .works ul li:hover > a {
+      opacity: 1.0; }
+    .works ul li:hover > .blur {
+      opacity: 1.0; }
+  .works a.more {
+    display: block;
+    margin: 40px auto 0;
+    background: #031418;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px; }
+  .works .more:hover {
+    opacity: 0.8; }
