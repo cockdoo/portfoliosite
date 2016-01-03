@@ -6,6 +6,10 @@ html,body {
 	font-size: 15px;
 	// letter-spacing: 0.02em;
 	font-family: 'Roboto', 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif;
+
+	@media screen and (max-width: 540px) {
+		font-size: 14px;
+	}
 }
 
 /*  Header  */
@@ -45,6 +49,14 @@ header {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: 540px) {
+	// header {
+	// 	nav {
+	// 		display: none;
+	// 	}
+	// }
 }
 
 /*  Footer  */

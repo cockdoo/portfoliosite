@@ -5,14 +5,15 @@ $about_pc_width: 700px;
 $about_tablet_width: 490px;
 
 @mixin holder($ratio) {
-	padding: 40px 0;
 
+	padding: 40px 0;
 	width: $about_pc_width/$ratio;
 	@media screen and (max-width: 768px) {
 		width: $about_tablet_width/$ratio;
 	}
 	@media screen and (max-width: 540px) {
-		width: 100%;
+		padding: 20px 15px;
+		width: auto;
 	}
 }
 
@@ -80,9 +81,7 @@ $about_tablet_width: 490px;
 
 @media screen and (max-width: 768px) {
 	.plofile {
-
 		.holder {
-
 			img {
 				width: 180px;
 				height: 180px;
@@ -93,7 +92,6 @@ $about_tablet_width: 490px;
 				margin-left: 35px;
 			}
 			dd {
-
 				p.pc_inline {
 					display: block;
 				}
@@ -102,25 +100,17 @@ $about_tablet_width: 490px;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 540px) {
 	.plofile {
-
 		.holder {
-
 			img {
-				width: 180px;
-				height: 180px;
-				margin-top: 50px;
+				display: none;
 			}
 			dl {
-				width: auto;
-				margin-left: 35px;
+				margin-left: 10%;
 			}
 			dd {
 
-				p.pc_inline {
-					display: block;
-				}
 			}
 		}
 	}
@@ -189,8 +179,6 @@ $about_tablet_width: 490px;
 	.skills {
 		flex-basis: 100%;
 		background: none;
-		margin-left: 0px;
-		padding: 0 20px;
 
 		.holder {
 			@include holder(1);
@@ -216,7 +204,6 @@ $about_tablet_width: 490px;
 		}
 	}
 }
-
 
 /*  Experience  */
 
@@ -276,7 +263,6 @@ $about_tablet_width: 490px;
 	.experience {
 		flex-basis: 100%;
 		background: none;
-		padding: 0 20px;
 
 		.holder {
 			@include holder(1);
@@ -325,7 +311,7 @@ $about_tablet_width: 490px;
 				p {
 					font-size: 90%;
 					margin-top: 10px;
-					line-height: 1.8em;
+					line-height: 2.0em;
 
 					a {
 						color: #1BA6D3;
@@ -359,12 +345,5 @@ $about_tablet_width: 490px;
 	}
 }
 
-
 }
 
-@media screen and (max-width: 540px) {
-	.about-contaner {
-
-	}
-}
-	

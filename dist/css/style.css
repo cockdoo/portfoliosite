@@ -114,9 +114,12 @@ Break Point
     @media screen and (max-width: 768px) {
       .about-container #heading_bg {
         height: 150px;
-        background-size: 900px auto; } }
+        background-size: 600px auto; } }
+    @media screen and (max-width: 768px) {
+      .about-container #heading_bg {
+        height: 100px; } }
     .about-container #heading_bg h1 {
-      font-size: 30px;
+      font-size: 200%;
       color: #fff;
       line-height: 180px;
       text-align: center;
@@ -125,6 +128,10 @@ Break Point
       @media screen and (max-width: 768px) {
         .about-container #heading_bg h1 {
           line-height: 150px; } }
+      @media screen and (max-width: 768px) {
+        .about-container #heading_bg h1 {
+          line-height: 100px;
+          font-size: 160%; } }
   .about-container .plofile {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -138,7 +145,8 @@ Break Point
           width: 490px; } }
       @media screen and (max-width: 540px) {
         .about-container .plofile .holder {
-          width: 100%; } }
+          padding: 20px 15px;
+          width: auto; } }
       .about-container .plofile .holder h2 {
         font-weight: bold;
         height: 20px;
@@ -172,16 +180,11 @@ Break Point
       margin-left: 35px; }
     .about-container .plofile .holder dd p.pc_inline {
       display: block; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 540px) {
     .about-container .plofile .holder img {
-      width: 180px;
-      height: 180px;
-      margin-top: 50px; }
+      display: none; }
     .about-container .plofile .holder dl {
-      width: auto;
-      margin-left: 35px; }
-    .about-container .plofile .holder dd p.pc_inline {
-      display: block; } }
+      margin-left: 10%; } }
   .about-container .skills {
     background: #F6F6F6;
     -webkit-flex-basis: 50%;
@@ -196,7 +199,8 @@ Break Point
           width: 245px; } }
       @media screen and (max-width: 540px) {
         .about-container .skills .holder {
-          width: 100%; } }
+          padding: 20px 15px;
+          width: auto; } }
       .about-container .skills .holder h2 {
         font-weight: bold;
         height: 20px; }
@@ -261,9 +265,7 @@ Break Point
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
-      background: none;
-      margin-left: 0px;
-      padding: 0 20px; }
+      background: none; }
       .about-container .skills .holder {
         padding: 40px 0;
         width: 700px;
@@ -273,7 +275,8 @@ Break Point
         width: 490px; } }
     @media screen and (max-width: 768px) and (max-width: 540px) {
       .about-container .skills .holder {
-        width: 100%; } }
+        padding: 20px 15px;
+        width: auto; } }
   @media screen and (max-width: 768px) {
         .about-container .skills .holder h2 {
           border-bottom: 1px solid #E0E0E0; }
@@ -308,7 +311,8 @@ Break Point
           width: 245px; } }
       @media screen and (max-width: 540px) {
         .about-container .experience .holder {
-          width: 100%; } }
+          padding: 20px 15px;
+          width: auto; } }
       .about-container .experience .holder h2 {
         font-weight: bold;
         height: 20px; }
@@ -349,8 +353,7 @@ Break Point
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
-      background: none;
-      padding: 0 20px; }
+      background: none; }
       .about-container .experience .holder {
         padding: 40px 0;
         width: 700px;
@@ -360,7 +363,8 @@ Break Point
         width: 490px; } }
     @media screen and (max-width: 768px) and (max-width: 540px) {
       .about-container .experience .holder {
-        width: 100%; } }
+        padding: 20px 15px;
+        width: auto; } }
   @media screen and (max-width: 768px) {
         .about-container .experience .holder h2 {
           border-bottom: 1px solid #E0E0E0; }
@@ -395,7 +399,8 @@ Break Point
           width: 490px; } }
       @media screen and (max-width: 540px) {
         .about-container .about_this_site .holder {
-          width: 100%; } }
+          padding: 20px 15px;
+          width: auto; } }
       .about-container .about_this_site .holder h2 {
         font-weight: bold;
         height: 20px; }
@@ -404,7 +409,7 @@ Break Point
         .about-container .about_this_site .holder .description p {
           font-size: 90%;
           margin-top: 10px;
-          line-height: 1.8em; }
+          line-height: 2.0em; }
           .about-container .about_this_site .holder .description p a {
             color: #1BA6D3; }
           .about-container .about_this_site .holder .description p a:hover {
@@ -441,6 +446,9 @@ Break Point
 html, body {
   font-size: 15px;
   font-family: 'Roboto', 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif; }
+  @media screen and (max-width: 540px) {
+    html, body {
+      font-size: 14px; } }
 
 /*  Header  */
 header {
@@ -542,9 +550,12 @@ Break Point
     @media screen and (max-width: 768px) {
       .contact-container #heading_bg {
         height: 150px;
-        background-size: 900px auto; } }
+        background-size: 600px auto; } }
+    @media screen and (max-width: 768px) {
+      .contact-container #heading_bg {
+        height: 100px; } }
     .contact-container #heading_bg h1 {
-      font-size: 30px;
+      font-size: 200%;
       color: #fff;
       line-height: 180px;
       text-align: center;
@@ -552,6 +563,10 @@ Break Point
       @media screen and (max-width: 768px) {
         .contact-container #heading_bg h1 {
           line-height: 150px; } }
+      @media screen and (max-width: 768px) {
+        .contact-container #heading_bg h1 {
+          line-height: 100px;
+          font-size: 160%; } }
   .contact-container #mail {
     max-width: 700px;
     margin: 30px auto;
@@ -1152,9 +1167,12 @@ Break Point
     @media screen and (max-width: 768px) {
       .works-container #heading_bg {
         height: 150px;
-        background-size: 900px auto; } }
+        background-size: 600px auto; } }
+    @media screen and (max-width: 768px) {
+      .works-container #heading_bg {
+        height: 100px; } }
     .works-container #heading_bg h1 {
-      font-size: 30px;
+      font-size: 200%;
       color: #fff;
       line-height: 180px;
       text-align: center;
@@ -1162,3 +1180,7 @@ Break Point
       @media screen and (max-width: 768px) {
         .works-container #heading_bg h1 {
           line-height: 150px; } }
+      @media screen and (max-width: 768px) {
+        .works-container #heading_bg h1 {
+          line-height: 100px;
+          font-size: 160%; } }
