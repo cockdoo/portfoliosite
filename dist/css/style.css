@@ -1025,8 +1025,9 @@ Break Point
         background-size: 800px auto; } }
     @media screen and (max-width: 540px) {
       .top-container #top_bg {
-        height: 250px;
-        background-size: 600px auto; } }
+        background-image: url(../img/bg_top_sp.jpg);
+        height: 200px;
+        background-size: 540px auto; } }
     .top-container #top_bg .overlay {
       position: absolute;
       background: rgba(0, 0, 0, 0.2);
@@ -1035,7 +1036,7 @@ Break Point
     .top-container #top_bg .title-container {
       position: absolute;
       height: 80px;
-      width: 400px;
+      width: auto;
       top: 0px;
       left: 0px;
       right: 0px;
@@ -1058,13 +1059,14 @@ Break Point
         letter-spacing: 0.2em; }
     @media screen and (max-width: 540px) {
       .top-container #top_bg .title-container {
-        height: 50px; }
+        height: 52px; }
         .top-container #top_bg .title-container h1 {
           font-size: 200%; }
         .top-container #top_bg .title-container .subtitle {
           margin-top: 0px; }
         .top-container #top_bg .title-container .do {
-          font-size: 85%; } }
+          font-size: 85%;
+          margin-top: 20px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
@@ -1306,7 +1308,7 @@ Break Point
 /*  Works  */
 .works {
   width: 100%;
-  padding: 50px 30px; }
+  padding: 40px 30px; }
   .works ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1342,41 +1344,40 @@ Break Point
         opacity: 0.0;
         -webkit-transition: opacity 0.1s ease;
         transition: opacity 0.1s ease; }
-      .works ul li a {
-        opacity: 0.0;
-        -webkit-transition: opacity 0.1s ease;
-        transition: opacity 0.1s ease; }
       .works ul li .overlay {
         position: absolute;
         top: 0px;
         left: 0px;
         width: 84%;
-        height: 86%;
+        height: 76%;
         background: rgba(0, 0, 0, 0.55);
         color: #fff;
-        padding: 7% 8%;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+        padding: 12% 8%;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        opacity: 0.0;
+        -webkit-transition: opacity 0.1s ease;
+        transition: opacity 0.1s ease; }
         .works ul li .overlay .title {
-          font-size: 15px;
-          font-weight: bold; }
+          font-weight: bold;
+          font-size: 120%;
+          line-height: 1.6em; }
         .works ul li .overlay .subtitle {
-          margin-top: 2px;
-          font-size: 13px; }
+          margin-top: 3px;
+          line-height: 1.4em; }
         .works ul li .overlay .separator {
-          margin: 15px 0 15px;
-          width: 35px;
-          height: 2px;
+          margin: 20px 0 20px;
+          width: 15px;
+          height: 1px;
           background: #fff; }
-        .works ul li .overlay .description {
-          font-size: 11px;
-          line-height: 1.8em; }
+        .works ul li .overlay .media {
+          font-size: 100%; }
     .works ul li:before {
       content: "";
       display: block;
       padding: 32%; }
-    .works ul li:hover > a {
+    .works ul a:hover > .overlay {
       opacity: 1.0; }
-    .works ul li:hover > .blur {
+    .works ul a:hover > .blur {
       opacity: 1.0; }
   .works a.more {
     display: block;
@@ -1386,8 +1387,45 @@ Break Point
     width: 200px;
     height: 40px;
     line-height: 40px;
-    font-size: 14px;
     text-align: center;
     border-radius: 4px; }
   .works .more:hover {
     opacity: 0.8; }
+
+@media screen and (max-width: 940px) {
+  .works {
+    padding: 30px 20px; }
+    .works ul li {
+      -webkit-flex-basis: 48%;
+          -ms-flex-preferred-size: 48%;
+              flex-basis: 48%; } }
+
+@media screen and (max-width: 540px) {
+  .works {
+    padding: 15px 10px; }
+    .works ul li {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      box-shadow: 0 1px 0 #E0E0E0; }
+      .works ul li .blur {
+        display: none; }
+      .works ul li .overlay {
+        position: relative;
+        opacity: 1.0;
+        background: #F6F6F6;
+        color: #595A5D;
+        text-shadow: none;
+        padding: 3%;
+        width: 94%;
+        height: auto; }
+        .works ul li .overlay .separator {
+          background-color: #595A5D;
+          margin: 10px 0;
+          height: 1px;
+          width: 10px; }
+        .works ul li .overlay .media {
+          font-size: 90%;
+          color: #66666C; }
+    .works a.more {
+      margin: 20px auto; } }

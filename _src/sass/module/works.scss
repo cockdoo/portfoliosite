@@ -20,7 +20,7 @@
 /*  Works  */
 .works {
 	width: 100%;
-	padding: 50px 30px;
+	padding: 40px 30px;
 	
 	ul {
 		display: flex;
@@ -35,6 +35,9 @@
 			margin-bottom: 15px;
 			border-radius: 4px;
 
+			a {
+
+			}
 			img {
 				position: absolute;
 				width: 100%;
@@ -51,41 +54,39 @@
 				opacity: 0.0;
 				transition: opacity 0.1s ease;
 			}
-			a {
-				opacity: 0.0;
-				transition: opacity 0.1s ease;
-			}
 			.overlay {
 				position: absolute;
 				top: 0px;
 				left: 0px;
 				width: 84%;
-				height: 86%;
+				height: 76%;
 				background: rgba(#000, 0.55);
 				color: #fff;
-				padding: 7% 8%;
+				padding: 12% 8%;
 				text-shadow: 0px 0px 3px rgba(#000, 0.2);
+				opacity: 0.0;
+				transition: opacity 0.1s ease;
 
 				.title {
-					font-size: 15px;
 					font-weight: bold;
+					font-size: 120%;
+					line-height: 1.6em;
 				}
 
 				.subtitle {
-					margin-top: 2px;
-					font-size: 13px;
+					margin-top: 3px;
+					line-height: 1.4em;
 				}
 
 				.separator {
-					margin: 15px 0 15px;
-					width: 35px;
-					height: 2px;
+					margin: 20px 0 20px;
+					width: 15px;
+					height: 1px;
 					background: #fff;
 				}
-
-				.description {
-					font-size: 11px;
-					line-height: 1.8em;
+				.media {
+					// font-size: 0%;
+					font-size: 100%;
 				}
 			}
 		}
@@ -94,10 +95,10 @@
 			display: block;
 			padding: 32%;
 		}
-		li:hover > a {
+		a:hover > .overlay {
 			opacity: 1.0;
 		}
-		li:hover > .blur {
+		a:hover > .blur {
 			opacity: 1.0;
 		}
 	}
@@ -109,7 +110,6 @@
 		width: 200px;
 		height: 40px;
 		line-height: 40px;
-		font-size: 14px;
 		text-align: center;
 		border-radius: 4px;
 	}
@@ -119,11 +119,57 @@
 }
 
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (max-width: 940px) {
+	.works {
+		padding: 30px 20px;
+		ul {
+			li {
+				flex-basis: 48%;
+			}
+		}
+	}	
 }
 
 @media screen and (max-width: 540px) {
+	.works {
+		padding: 15px 10px;
+		ul {
+			li {
+				flex-basis: 100%;
+				box-shadow: 0 1px 0 $border_color;
 
+				a {
+
+				}
+				.blur {
+					display: none;
+				}
+				.overlay {
+					position: relative;
+					opacity: 1.0;
+					background: $gray;
+					color: $text_color;
+					text-shadow: none;
+					padding: 3%;
+					width: 94%;
+					height: auto;
+
+					.separator {
+						background-color: $text_color;
+						margin: 10px 0;
+						height: 1px;
+						width: 10px;
+					}
+					.media {
+						font-size: 90%;
+						color: $subtext_color;
+					}
+				}
+			}
+		}
+		a.more {
+			margin: 20px auto;
+		}
+	}	
 }
 	

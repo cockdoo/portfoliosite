@@ -21,8 +21,9 @@
 			background-size: 800px auto;
 		}
 		@media screen and (max-width: 540px) {
-			height: 250px;
-			background-size: 600px auto;
+			background-image: url(../img/bg_top_sp.jpg);
+			height: 200px;
+			background-size: 540px auto;
 		}
 
 		.overlay {
@@ -35,7 +36,7 @@
 		.title-container {
 			position: absolute;
 			height: 80px;
-			width: 400px;
+			width: auto;
 			top: 0px;
 			left: 0px;
 			right: 0px;
@@ -66,7 +67,8 @@
 		}
 		@media screen and (max-width: 540px) {
 			.title-container {
-				height: 50px;
+				height: 52px;
+
 				h1 {
 					font-size: 200%;
 				}
@@ -75,6 +77,7 @@
 				}
 				.do {
 					font-size: 85%;
+					margin-top: 20px;
 				}
 			}
 		}
