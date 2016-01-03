@@ -17,14 +17,10 @@ $serif: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho Pro
 $pc_width: 940px;
 $tablet_width: 768px;
 $sp_width: 540px;
-
 $header_height: 40px;
 
 
-html,body {
-	font-size: 14px;
-	font-family: $sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 a {
 	text-decoration: none;

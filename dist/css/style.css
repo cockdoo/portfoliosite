@@ -1,8 +1,4 @@
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -75,11 +71,7 @@ legend {
 #yui3-css-stamp.cssreset {
   display: none; }
 
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -345,10 +337,7 @@ Break Point
           padding: 0 30px; } }
 
 @charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -360,6 +349,11 @@ Break Point
 540px
 
 */
+/* Body */
+html, body {
+  font-size: 14px;
+  font-family: 'Roboto', 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif; }
+
 /*  Header  */
 header {
   background-color: rgba(3, 20, 24, 0.95);
@@ -420,11 +414,7 @@ footer {
     text-align: center;
     padding-bottom: 10px; }
 
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -693,11 +683,7 @@ Break Point
   font-size: .85em;
   padding: 10px; }
 
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -850,11 +836,7 @@ Break Point
   .works .more:hover {
     opacity: 0.8; }
 
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
@@ -1043,11 +1025,7 @@ Break Point
       max-width: 470px;
       margin-right: auto; }
 
-@charset "UTF-8";
-html, body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
-
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 a {
   text-decoration: none; }
 
