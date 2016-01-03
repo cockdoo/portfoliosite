@@ -19,7 +19,7 @@ gulp.task('webserver', function() {
     }));
 });
 
-//jsの圧縮
+//jsのコピー
 gulp.task("js", function() {
   gulp.src(["_src/js/**/*.js","!_src/js/lib/*.js"])
   	.pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
@@ -27,12 +27,13 @@ gulp.task("js", function() {
 	  .pipe(gulp.dest("dist/js"))
 });
 
-//jsライブラリのコピー
+//jsライブラリのコピー＆結合
 gulp.task("lib", function() {
   gulp.src("_src/js/lib/*.js")
   	.pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
-	  .pipe(uglify())
-	  .pipe(gulp.dest("dist/js/lib"))
+    .pipe(concat('lib.js'))
+	  // .pipe(uglify())
+	  .pipe(gulp.dest("dist/js"))
 });
 
 //sassのコンパイル
@@ -68,6 +69,8 @@ gulp.task("img_min", function () {
 gulp.task("watch", function() {
     gulp.watch("_src/js/*.js",["js"]);
     gulp.watch("_src/js/lib/*.js",["lib"]);
+    // gulp.watch("_src/*/*.js",["js_all"]);
+    
     gulp.watch("_src/sass/**/*.scss",["sass"]);
     gulp.watch("_src/**/*.html",["html"]);
     gulp.watch("_src/img/**/*",["img_copy"]);
