@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -72,6 +75,9 @@ legend {
   display: none; }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -124,8 +130,7 @@ Break Point
       color: #fff;
       line-height: 190px;
       text-align: center;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-      background: rgba(0, 0, 0, 0.1); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
       @media screen and (max-width: 768px) {
         .about-container #heading_bg h1 {
           line-height: 160px; } }
@@ -165,7 +170,7 @@ Break Point
       .about-container .plofile .holder dt {
         margin-top: 10px;
         font-size: 73%;
-        color: #66666C; }
+        color: #747477; }
       .about-container .plofile .holder dd {
         font-weight: bold;
         line-height: 1.6em; }
@@ -334,7 +339,7 @@ Break Point
         padding: 10px 0; }
         .about-container .experience .holder dt .term {
           font-size: 70%;
-          color: #66666C; }
+          color: #747477; }
       .about-container .experience .holder dd {
         -webkit-flex-basis: 50%;
             -ms-flex-preferred-size: 50%;
@@ -348,7 +353,7 @@ Break Point
           text-decoration: underline; }
         .about-container .experience .holder dd .role {
           font-size: 70%;
-          color: #66666C; }
+          color: #747477; }
   @media screen and (max-width: 768px) {
     .about-container .experience {
       -webkit-flex-basis: 100%;
@@ -432,6 +437,9 @@ Break Point
 
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -530,7 +538,11 @@ footer {
         display: block;
         padding: 15px 20px; } }
 
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -607,11 +619,11 @@ Break Point
       height: 50px;
       line-height: 50px;
       text-align: right;
-      font-size: 16px; }
+      font-size: 110%; }
     .contact-container #mail dd {
-      -webkit-flex-basis: 70%;
-          -ms-flex-preferred-size: 70%;
-              flex-basis: 70%;
+      -webkit-flex-basis: 76%;
+          -ms-flex-preferred-size: 76%;
+              flex-basis: 76%;
       margin-left: 20px; }
       .contact-container #mail dd input {
         height: 30px;
@@ -622,9 +634,9 @@ Break Point
         border: 1px #E0E0E0 solid;
         box-shadow: 1px 1px 0px #E0E0E0 inset;
         background: #fafafa;
-        font-size: 14px;
-        padding: 0 5px;
-        color: #595A5D; }
+        padding: 0px 5px;
+        color: #595A5D;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
       .contact-container #mail dd input:focus {
         outline-color: #EC9B52;
         outline-width: 3px; }
@@ -634,9 +646,9 @@ Break Point
         border: 1px #E0E0E0 solid;
         box-shadow: 1px 1px 0px #E0E0E0 inset;
         background: #fafafa;
-        font-size: 14px;
-        padding: 0 5px;
-        color: #595A5D; }
+        padding: 0px 5px;
+        color: #595A5D;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", verdana, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif; }
       .contact-container #mail dd textarea:focus {
         outline-color: #EC9B52;
         outline-width: 3px; }
@@ -654,6 +666,61 @@ Break Point
       opacity: 0.8; }
     .contact-container #mail .send:focus {
       outline: none; }
+  @media screen and (max-width: 768px) {
+    .contact-container #mail {
+      max-width: 490px; }
+      .contact-container #mail dt {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        text-align: left;
+        height: 30px;
+        margin-top: 15px; }
+      .contact-container #mail dt:first-child {
+        margin-top: 0px; }
+      .contact-container #mail dd {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        margin-left: 0px; } }
+  @media screen and (max-width: 540px) {
+    .contact-container #mail {
+      width: auto;
+      padding: 0 10px; }
+      .contact-container #mail dt {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        text-align: left;
+        height: 30px;
+        margin-top: 15px; }
+      .contact-container #mail dt:first-child {
+        margin-top: 0px; }
+      .contact-container #mail dd {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+        margin-left: 0px; }
+        .contact-container #mail dd input {
+          max-width: 95%;
+          padding: 0 5px; }
+        .contact-container #mail dd textarea {
+          width: 100%;
+          padding: 0; }
+      .contact-container #mail .send {
+        background: #EC9B52;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 50px;
+        border: none;
+        border-radius: 4px;
+        display: block;
+        margin: 30px auto 10px; }
+      .contact-container #mail .send:hover {
+        cursor: pointer;
+        opacity: 0.8; }
+      .contact-container #mail .send:focus {
+        outline: none; } }
 
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
@@ -820,6 +887,9 @@ Break Point
     Mobile Menu Core Style
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -988,6 +1058,9 @@ Break Point
     display: block; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -1071,6 +1144,9 @@ Break Point
           margin-top: 20px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -1117,7 +1193,9 @@ Break Point
       font-weight: bold; }
     .work-container .title .subtitle {
       font-size: 120%;
-      color: #66666C; }
+      color: #747477;
+      margin-top: 5px;
+      line-height: 1.6em; }
   .work-container .main {
     -webkit-flex-basis: 620px;
         -ms-flex-preferred-size: 620px;
@@ -1159,11 +1237,11 @@ Break Point
       display: inline-block; }
       .work-container .information dd .role {
         font-size: 70%;
-        color: #66666C;
+        color: #747477;
         margin: -2px 0 5px; }
       .work-container .information dd .term {
         font-size: 70%;
-        color: #66666C;
+        color: #747477;
         margin-top: -2px; }
     .work-container .information a {
       display: block;
@@ -1252,6 +1330,9 @@ Break Point
         right: 15px; }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+input[type="button"], input[type="submit"] {
+  -webkit-appearance: none; }
+
 a {
   text-decoration: none; }
 
@@ -1420,7 +1501,7 @@ Break Point
         background: #F6F6F6;
         color: #595A5D;
         text-shadow: none;
-        padding: 3%;
+        padding: 4% 3%;
         width: 94%;
         height: auto; }
         .works ul li .overlay .separator {
@@ -1430,6 +1511,6 @@ Break Point
           width: 10px; }
         .works ul li .overlay .media {
           font-size: 90%;
-          color: #66666C; }
+          color: #747477; }
     .works a.more {
       margin: 20px auto; } }
