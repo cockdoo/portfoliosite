@@ -130,7 +130,7 @@ Break Point
       color: #fff;
       line-height: 190px;
       text-align: center;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
       @media screen and (max-width: 768px) {
         .about-container #heading_bg h1 {
           line-height: 160px; } }
@@ -592,7 +592,7 @@ Break Point
       color: #fff;
       line-height: 190px;
       text-align: center;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
       @media screen and (max-width: 768px) {
         .contact-container #heading_bg h1 {
           line-height: 160px; } }
@@ -1105,7 +1105,7 @@ Break Point
         background-size: 540px auto; } }
     .top-container #top_bg .overlay {
       position: absolute;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.1);
       width: 100%;
       height: 100%; }
     .top-container #top_bg .title-container {
@@ -1138,10 +1138,20 @@ Break Point
         .top-container #top_bg .title-container h1 {
           font-size: 200%; }
         .top-container #top_bg .title-container .subtitle {
-          margin-top: 0px; }
+          margin-top: -3px; }
         .top-container #top_bg .title-container .do {
           font-size: 85%;
           margin-top: 20px; } }
+  .top-container h2 {
+    display: none; }
+    @media screen and (max-width: 540px) {
+      .top-container h2 {
+        display: block;
+        width: 100%;
+        margin: 30px 15px -5px;
+        padding-bottom: 3px;
+        font-weight: bold;
+        border-bottom: solid 1px #E0E0E0; } }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 input[type="button"], input[type="submit"] {
@@ -1190,7 +1200,8 @@ Break Point
     margin-top: 30px; }
     .work-container .title h1 {
       font-size: 160%;
-      font-weight: bold; }
+      font-weight: bold;
+      line-height: 1.4em; }
     .work-container .title .subtitle {
       font-size: 120%;
       color: #747477;
@@ -1205,12 +1216,17 @@ Break Point
         width: 100%; } }
     .work-container .main .article img {
       width: 100%;
-      margin: 10px 0; }
+      margin: 20px 0; }
     .work-container .main .article p {
       line-height: 2.0em;
-      margin-bottom: 20px; }
+      margin-bottom: 30px; }
     .work-container .main .article p:last-child {
       margin-bottom: 0px; }
+    @media screen and (max-width: 940px) {
+      .work-container .main .article img {
+        margin: 15px 0; }
+      .work-container .main .article p {
+        margin-bottom: 20px; } }
   .work-container .information {
     -webkit-flex-basis: 290px;
         -ms-flex-preferred-size: 290px;
@@ -1233,28 +1249,40 @@ Break Point
     .work-container .information dt:first-child {
       margin-top: 0px; }
     .work-container .information dd {
-      margin: 0px 0 15px;
-      display: inline-block; }
+      margin: 2px 0 15px;
+      display: inline-block;
+      line-height: 1.4em; }
       .work-container .information dd .role {
         font-size: 70%;
         color: #747477;
         margin: -2px 0 5px; }
+      .work-container .information dd .month {
+        margin-top: 2px; }
       .work-container .information dd .term {
         font-size: 70%;
         color: #747477;
-        margin-top: -2px; }
+        margin-top: 0px; }
     .work-container .information a {
       display: block;
       padding: 15px 65px;
-      background: #EC9B52;
       text-align: center;
       color: #fff;
       margin-top: 10px;
       border-radius: 4px;
       font-weight: bold;
-      box-shadow: 0px 2px 0px #CACACA;
+      background: #EC9B52;
       -webkit-transition: opacity 0.1s ease;
-      transition: opacity 0.1s ease; }
+      transition: opacity 0.1s ease;
+      box-shadow: 0px 2px 0px #CACACA; }
+    .work-container .information span {
+      display: block;
+      padding: 15px 65px;
+      text-align: center;
+      color: #fff;
+      margin-top: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      background: #747477; }
     .work-container .information a:hover {
       opacity: 0.9; }
     .work-container .information a:active {
@@ -1300,13 +1328,21 @@ Break Point
         text-align: center;
         font-weight: bold;
         color: #5C5C5C;
-        margin: 10px 0; }
+        margin: 10px auto;
+        max-width: 90%;
+        line-height: 1.3em; }
       .work-container .paging a.prev .arrow_prev {
+        display: none;
         width: 12px;
         height: auto;
         position: absolute;
-        bottom: 10px;
         left: 15px; }
+      .work-container .paging a.prev .arrow_next {
+        display: none;
+        width: 12px;
+        height: auto;
+        position: absolute;
+        right: 15px; }
     .work-container .paging a.next {
       background: #F6F6F6;
       width: 47%;
@@ -1321,12 +1357,20 @@ Break Point
         text-align: center;
         font-weight: bold;
         color: #5C5C5C;
-        margin: 10px 0; }
-      .work-container .paging a.next .arrow_next {
+        margin: 10px auto;
+        max-width: 90%;
+        line-height: 1.3em; }
+      .work-container .paging a.next .arrow_prev {
+        display: none;
         width: 12px;
         height: auto;
         position: absolute;
-        bottom: 10px;
+        left: 15px; }
+      .work-container .paging a.next .arrow_next {
+        display: none;
+        width: 12px;
+        height: auto;
+        position: absolute;
         right: 15px; }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -1381,7 +1425,7 @@ Break Point
       color: #fff;
       line-height: 190px;
       text-align: center;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
       @media screen and (max-width: 768px) {
         .works-container #heading_bg h1 {
           line-height: 160px; } }
@@ -1434,10 +1478,10 @@ Break Point
         top: 0px;
         left: 0px;
         width: 84%;
-        height: 76%;
+        height: 80%;
         background: rgba(0, 0, 0, 0.55);
         color: #fff;
-        padding: 12% 8%;
+        padding: 10% 8%;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
         opacity: 0.0;
         -webkit-transition: opacity 0.1s ease;
@@ -1487,12 +1531,13 @@ Break Point
 
 @media screen and (max-width: 540px) {
   .works {
-    padding: 15px 10px; }
+    padding: 20px 15px; }
     .works ul li {
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
-      box-shadow: 0 1px 0 #E0E0E0; }
+      box-shadow: 0 1px 0 #E0E0E0;
+      border: solid 1px #E0E0E0; }
       .works ul li .blur {
         display: none; }
       .works ul li .overlay {
@@ -1501,16 +1546,21 @@ Break Point
         background: #F6F6F6;
         color: #595A5D;
         text-shadow: none;
-        padding: 4% 3%;
+        padding: 3% 3% 2%;
         width: 94%;
         height: auto; }
+        .works ul li .overlay .title {
+          font-size: 100%;
+          line-height: 1.4em; }
+        .works ul li .overlay .subtitle {
+          font-size: 90%; }
         .works ul li .overlay .separator {
           background-color: #595A5D;
           margin: 10px 0;
           height: 1px;
           width: 10px; }
         .works ul li .overlay .media {
-          font-size: 90%;
+          font-size: 80%;
           color: #747477; }
     .works a.more {
       margin: 20px auto; } }

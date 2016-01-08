@@ -25,6 +25,7 @@
 		h1 {
 			font-size: 160%;
 			font-weight: bold;
+			line-height: 1.4em;
 		}
 		.subtitle {
 			font-size: 120%;
@@ -46,15 +47,23 @@
 		.article {
 			img {
 				width: 100%;
-				margin: 10px 0;
+				margin: 20px 0;
 			}		
 			p {
 				line-height: 2.0em;
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 			}
 			p:last-child {
 				margin-bottom: 0px;
-			}			
+			}
+			@media screen and (max-width: 940px) {
+				img {
+					margin: 15px 0;
+				}
+				p {
+					margin-bottom: 20px;
+				}
+			}		
 		}
 	}
 
@@ -82,8 +91,9 @@
 			margin-top: 0px;
 		}
 		dd {
-			margin: 0px 0 15px;
+			margin: 2px 0 15px;
 			display: inline-block;
+			line-height: 1.4em;
 
 			.members {
 
@@ -94,24 +104,32 @@
 				margin: -2px 0 5px;
 			}
 			.month {
+				margin-top: 2px;
 			}
 			.term {
 				font-size: 70%;
 				color: $subtext_color;
-				margin-top: -2px;
+				margin-top: 0px;
 			}
 		}
-		a {
+		@mixin visit_btn() {
 			display: block;
 			padding: 15px 65px;
-			background: $orange;
 			text-align: center;
 			color: #fff;
 			margin-top: 10px;
 			border-radius: 4px;
 			font-weight: bold;
-			box-shadow: 0px 2px 0px #CACACA;
+		}
+		a {
+			@include visit_btn();
+			background: $orange;
 			transition: opacity 0.1s ease;
+			box-shadow: 0px 2px 0px #CACACA;
+		}
+		span {
+			@include visit_btn();
+			background: $subtext_color;
 		}
 		a:hover {
 			opacity: 0.9;
@@ -161,35 +179,41 @@
 			img.thumb {
 				width: 100%;
 			}
+			// .bottom {
+			// 	position: relative;
+			// }
 			p {
 				text-align: center;
 				font-weight: bold;
 				color: #5C5C5C;
-				margin: 10px 0;
+				margin: 10px auto;
+				max-width: 90%;
+				line-height: 1.3em;
 			}
-		}
-		@mixin arrow() {
-			width: 12px;
-			height: auto;
-			position: absolute;
-			bottom: 10px;
-		}
-		a.prev {
-			@include holder();
 
+			@mixin arrow() {
+				display: none;
+				width: 12px;
+				height: auto;
+				position: absolute;
+				// bottom: 10px;
+				// top: 34%;
+			}
 			.arrow_prev {
 				@include arrow();
 				left: 15px;
 			}
-		}
-		a.next {
-			@include holder();
-			margin-left: auto;
-
 			.arrow_next {
 				@include arrow();
 				right: 15px;
 			}
+		}
+		a.prev {
+			@include holder();
+		}
+		a.next {
+			@include holder();
+			margin-left: auto;
 		}
 	}
 }

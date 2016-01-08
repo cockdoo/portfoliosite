@@ -28,7 +28,7 @@
 
 		.overlay {
 			position: absolute;
-			background: rgba(#000, 0.2);
+			background: rgba(#000, 0.1);
 			width: 100%;
 			height: 100%;
 		}
@@ -73,13 +73,26 @@
 					font-size: 200%;
 				}
 				.subtitle {
-					margin-top: 0px;
+					margin-top: -3px;
 				}
 				.do {
 					font-size: 85%;
 					margin-top: 20px;
 				}
 			}
+		}
+	}
+
+	h2 {
+		display: none;
+
+		@media screen and (max-width: 540px) {
+			display: block;
+			width: 100%;
+			margin: 30px 15px -5px;
+			padding-bottom: 3px;
+			font-weight: bold;
+			border-bottom: solid 1px $border_color;
 		}
 	}
 }

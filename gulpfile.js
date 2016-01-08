@@ -32,7 +32,7 @@ gulp.task("lib", function() {
   gulp.src("_src/js/lib/*.js")
   	.pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('lib.js'))
-	  // .pipe(uglify())
+	  .pipe(uglify())
 	  .pipe(gulp.dest("dist/js"))
 });
 

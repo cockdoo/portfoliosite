@@ -59,10 +59,10 @@
 				top: 0px;
 				left: 0px;
 				width: 84%;
-				height: 76%;
+				height: 80%;
 				background: rgba(#000, 0.55);
 				color: #fff;
-				padding: 12% 8%;
+				padding: 10% 8%;
 				text-shadow: 0px 0px 3px rgba(#000, 0.2);
 				opacity: 0.0;
 				transition: opacity 0.1s ease;
@@ -132,11 +132,12 @@
 
 @media screen and (max-width: 540px) {
 	.works {
-		padding: 15px 10px;
+		padding: 20px 15px;
 		ul {
 			li {
 				flex-basis: 100%;
 				box-shadow: 0 1px 0 $border_color;
+				border: solid 1px $border_color;
 
 				a {
 
@@ -150,9 +151,18 @@
 					background: $gray;
 					color: $text_color;
 					text-shadow: none;
-					padding: 4% 3%;
+					padding: 3% 3% 2%;
 					width: 94%;
 					height: auto;
+
+					.title {
+						font-size: 100%;
+						line-height: 1.4em;
+					}
+
+					.subtitle {
+						font-size: 90%;
+					}
 
 					.separator {
 						background-color: $text_color;
@@ -161,7 +171,7 @@
 						width: 10px;
 					}
 					.media {
-						font-size: 90%;
+						font-size: 80%;
 						color: $subtext_color;
 					}
 				}

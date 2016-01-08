@@ -13,6 +13,8 @@ $(document).ready(function(){
   };
 
   $('#menu').slicknav();
+
+  setBlur(location.href);
 });
 
 function getElement() {
@@ -42,42 +44,64 @@ window.onscroll = function(){
 }
 
 // if文で書く
-$('#blur_01').backgroundBlur({
-    imageURL : 'img/work/petapeta/thumb.jpg',
+function setBlur (url) {
+	console.log();
+
+	var u = "img/work/";
+	if (url.substr(url.length - 6, 6) == "works/" || url.substr(url.length - 6, 6) == "/works") {
+		u = "../img/work/";
+	};
+
+	$('#blur_petapeta').backgroundBlur({
+    imageURL : u+'petapeta/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
-$('#blur_02').backgroundBlur({
-    imageURL : 'img/work/mybousainote/thumb.jpg',
+	});
+	$('#blur_mybousainote').backgroundBlur({
+    imageURL : u+'mybousainote/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
-$('#blur_03').backgroundBlur({
-    imageURL : 'img/work/clanberry/thumb.jpg',
+	});
+	$('#blur_clanberry').backgroundBlur({
+    imageURL : u+'clanberry/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
-$('#blur_04').backgroundBlur({
-    imageURL : 'img/work/battery/thumb.jpg',
+	});
+	$('#blur_battery').backgroundBlur({
+    imageURL : u+'battery/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
-$('#blur_05').backgroundBlur({
-    imageURL : 'img/work/iage/thumb.jpg',
+	});
+	$('#blur_iage').backgroundBlur({
+    imageURL : u+'iage/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
-$('#blur_06').backgroundBlur({
-    imageURL : 'img/work/roadscape/thumb.jpg',
+	});
+	$('#blur_roadscape').backgroundBlur({
+    imageURL : u+'roadscape/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-});
+	});
+	$('#blur_ndge').backgroundBlur({
+    imageURL : u+'ndge/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+	});
+	$('#blur_chu2').backgroundBlur({
+    imageURL : u+'chu2/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+	});
+}
+
 
 
 num = 1;
