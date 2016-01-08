@@ -54,7 +54,7 @@ gulp.task("html", function () {
 
 //画像のコピー
 gulp.task("img_copy", function () {
-	gulp.src("_src/img/**/")
+	gulp.src(["_src/img/**/*.jpg","_src/img/**/*.png"])
 		.pipe(gulp.dest("dist/img/"))
 });
 
@@ -73,7 +73,7 @@ gulp.task("watch", function() {
     
     gulp.watch("_src/sass/**/*.scss",["sass"]);
     gulp.watch("_src/**/*.html",["html"]);
-    gulp.watch("_src/img/**/*",["img_copy"]);
+    gulp.watch(["_src/img/**/*.jpg","_src/img/**/*.png"],["img_copy"]);
 });
 
 gulp.task("default",['webserver','watch']);
