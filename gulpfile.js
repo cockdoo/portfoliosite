@@ -7,6 +7,7 @@ var plumber = require("gulp-plumber"); //エラーハンドリング
 var notify = require("gulp-notify"); //デスクトップ通知
 var concat = require("gulp-concat"); //ファイルの結合
 var imagemin = require("gulp-imagemin"); //画像の圧縮
+var rimraf = require('rimraf'); //ファイルの削除
 
 //サーバーを起動
 gulp.task('webserver', function() {
@@ -56,6 +57,11 @@ gulp.task("html", function () {
 gulp.task("img_copy", function () {
 	gulp.src(["_src/img/**/*.jpg","_src/img/**/*.png"])
 		.pipe(gulp.dest("dist/img/"))
+});
+
+//distの画像を削除
+gulp.task('img_clean', function (cb) {
+  rimraf('dist/img/**/**', cb);
 });
 
 //画像の圧縮
