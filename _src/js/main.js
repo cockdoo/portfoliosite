@@ -47,9 +47,9 @@ window.onscroll = function(){
 function setBlur (url) {
 	console.log();
 
-	var u = "img/work/";
+	var u = "img/works/";
 	if (url.substr(url.length - 6, 6) == "works/" || url.substr(url.length - 6, 6) == "/works") {
-		u = "../img/work/";
+		u = "../img/works/";
 	};
 
 	$('#blur_petapeta').backgroundBlur({
