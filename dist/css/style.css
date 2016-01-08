@@ -1197,7 +1197,8 @@ Break Point
       width: auto;
       padding: 0 10px; } }
   .work-container .title {
-    margin-top: 30px; }
+    margin-top: 30px;
+    width: 100%; }
     .work-container .title h1 {
       font-size: 160%;
       font-weight: bold;
