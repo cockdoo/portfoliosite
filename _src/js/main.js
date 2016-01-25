@@ -69,13 +69,7 @@ function setBlur (url) {
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
-	});
-	$('#blur_battery').backgroundBlur({
-    imageURL : u+'battery/thumb.jpg',
-    blurAmount : 3,
-    imageClass : 'bg-blur',
-    endOpacity : 1.0
-	});
+	});Opacity : 1.0
 	$('#blur_iage').backgroundBlur({
     imageURL : u+'iage/thumb.jpg',
     blurAmount : 3,
@@ -94,8 +88,26 @@ function setBlur (url) {
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
+	$('#blur_elecafe').backgroundBlur({
+    imageURL : u+'elecafe/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+	});
+	$('#blur_cansatmapping').backgroundBlur({
+    imageURL : u+'cansatmapping/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+	});
 	$('#blur_chu2').backgroundBlur({
     imageURL : u+'chu2/thumb.jpg',
+    blurAmount : 3,
+    imageClass : 'bg-blur',
+    endOpacity : 1.0
+	});
+	$('#blur_cm2').backgroundBlur({
+    imageURL : u+'cm2/thumb.jpg',
     blurAmount : 3,
     imageClass : 'bg-blur',
     endOpacity : 1.0
