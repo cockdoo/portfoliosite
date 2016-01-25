@@ -54,61 +54,61 @@ function setBlur (url) {
 
 	$('#blur_petapeta').backgroundBlur({
     imageURL : u+'petapeta/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_mybousainote').backgroundBlur({
     imageURL : u+'mybousainote/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_clanberry').backgroundBlur({
     imageURL : u+'clanberry/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});Opacity : 1.0
 	$('#blur_iage').backgroundBlur({
     imageURL : u+'iage/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_roadscape').backgroundBlur({
     imageURL : u+'roadscape/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_ndge').backgroundBlur({
     imageURL : u+'ndge/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_elecafe').backgroundBlur({
     imageURL : u+'elecafe/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_cansatmapping').backgroundBlur({
     imageURL : u+'cansatmapping/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 0,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_chu2').backgroundBlur({
     imageURL : u+'chu2/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
 	$('#blur_cm2').backgroundBlur({
     imageURL : u+'cm2/thumb.jpg',
-    blurAmount : 3,
+    blurAmount : 1,
     imageClass : 'bg-blur',
     endOpacity : 1.0
 	});
