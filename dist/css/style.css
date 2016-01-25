@@ -447,10 +447,10 @@ Break Point
 540px
 
 // */
-a {
+a.link {
   color: #1BA6D3; }
 
-a:hover {
+a.link:hover {
   text-decoration: underline; }
 
 /* Body */
@@ -1322,10 +1322,8 @@ Break Point
         -ms-flex-preferred-size: 620px;
             flex-basis: 620px; }
     .work-container .paging a.prev {
-      background: #F6F6F6;
       width: 47%;
       display: inline-block;
-      border-radius: 4px;
       overflow: hidden;
       position: relative; }
       .work-container .paging a.prev img.thumb {
@@ -1350,10 +1348,8 @@ Break Point
         position: absolute;
         right: 15px; }
     .work-container .paging a.next {
-      background: #F6F6F6;
       width: 47%;
       display: inline-block;
-      border-radius: 4px;
       overflow: hidden;
       position: relative;
       margin-left: auto; }
