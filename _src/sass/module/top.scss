@@ -7,7 +7,7 @@
 		height: 450px;
 		width: 100%;
 		
-		background-image: url(../img/bg_top.jpg);
+		background-image: url(../img/bg/top.jpg);
 		background-size: 1300px auto;
 		background-position: 50% 60%;
 		position: relative;
@@ -21,7 +21,7 @@
 			background-size: 800px auto;
 		}
 		@media screen and (max-width: 540px) {
-			background-image: url(../img/bg_top_sp.jpg);
+			background-image: url(../img/bg/top_sp.jpg);
 			height: 200px;
 			background-size: 540px auto;
 		}

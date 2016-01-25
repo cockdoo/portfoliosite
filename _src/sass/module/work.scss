@@ -20,7 +20,7 @@
 
 /* Title */
 	.title {
-		margin-top: 30px;
+		margin: 30px 0px 20px;
 		width: 100%;
 
 		h1 {
@@ -31,7 +31,7 @@
 		.subtitle {
 			font-size: 120%;
 			color: $subtext_color;
-			margin-top: 5px;
+			margin-top: 0px;
 			line-height: 1.6em;
 		}
 	}
@@ -49,13 +49,21 @@
 			img {
 				width: 100%;
 				margin: 20px 0;
+			}
+			img:first-child {
+				margin-top: 0px;
 			}		
 			p {
 				line-height: 2.0em;
-				margin-bottom: 30px;
+				margin-bottom: 15px;
 			}
 			p:last-child {
 				margin-bottom: 0px;
+			}
+			p.caption {
+				font-size: 75%;
+				text-align: center;
+				margin: -10px 0; 
 			}
 			@media screen and (max-width: 940px) {
 				img {
@@ -122,7 +130,11 @@
 			border-radius: 4px;
 			font-weight: bold;
 		}
-		a {
+		a.link {
+			color: $text_color;
+			border-bottom: 1px dotted $text_color;
+		}
+		a.product_link {
 			@include visit_btn();
 			background: $orange;
 			transition: opacity 0.1s ease;
@@ -132,10 +144,10 @@
 			@include visit_btn();
 			background: $subtext_color;
 		}
-		a:hover {
+		a.product_link:hover {
 			opacity: 0.9;
 		}
-		a:active {
+		a.product_link:active {
 			box-shadow: none;
 		}
 	}

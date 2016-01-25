@@ -28,7 +28,7 @@ $about_tablet_width: 490px;
 /*   Heading  */
 	
 	#heading_bg {
-		background: url(../img/bg_about.jpg);
+		background: url(../img/bg/about.jpg);
 		@include heading_bg();
 
 		h1 {
@@ -311,13 +311,6 @@ $about_tablet_width: 490px;
 					font-size: 90%;
 					margin-top: 10px;
 					line-height: 2.0em;
-
-					a {
-						color: #1BA6D3;
-					}
-					a:hover {
-						text-decoration: underline;
-					}
 				}
 			}
 		}

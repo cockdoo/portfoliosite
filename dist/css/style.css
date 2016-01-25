@@ -107,7 +107,7 @@ Break Point
   /*  Experience  */
   /*  Avout this site  */ }
   .about-container #heading_bg {
-    background: url(../img/bg_about.jpg);
+    background: url(../img/bg/about.jpg);
     height: 180px;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -416,10 +416,6 @@ Break Point
           font-size: 90%;
           margin-top: 10px;
           line-height: 2.0em; }
-          .about-container .about_this_site .holder .description p a {
-            color: #1BA6D3; }
-          .about-container .about_this_site .holder .description p a:hover {
-            text-decoration: underline; }
   @media screen and (max-width: 768px) {
     .about-container .about_this_site {
       -webkit-flex-basis: 100%;
@@ -451,6 +447,12 @@ Break Point
 540px
 
 // */
+a {
+  color: #1BA6D3; }
+
+a:hover {
+  text-decoration: underline; }
+
 /* Body */
 html, body {
   font-size: 15px;
@@ -492,11 +494,14 @@ header {
       border-radius: 4px; }
     header nav.global_nav li a:hover {
       background: #4A5153; }
+  header nav#slicknav {
+    display: none; }
 
 @media screen and (max-width: 540px) {
   header nav.global_nav {
     display: none; }
   header nav#slicknav {
+    display: block;
     width: 100%; } }
 
 /*  Footer  */
@@ -569,7 +574,7 @@ Break Point
   /*   Heading  */
   /*  Form  */ }
   .contact-container #heading_bg {
-    background: url(../img/bg_contact.jpg);
+    background: url(../img/bg/contact.jpg);
     height: 180px;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -1048,15 +1053,6 @@ Break Point
 #menu {
   display: none; }
 
-.slicknav_menu {
-  display: none; }
-
-@media screen and (max-width: 540px) {
-  #menu {
-    display: none; }
-  .slicknav_menu {
-    display: block; } }
-
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 input[type="button"], input[type="submit"] {
   -webkit-appearance: none; }
@@ -1087,7 +1083,7 @@ Break Point
   .top-container #top_bg {
     height: 450px;
     width: 100%;
-    background-image: url(../img/bg_top.jpg);
+    background-image: url(../img/bg/top.jpg);
     background-size: 1300px auto;
     background-position: 50% 60%;
     position: relative; }
@@ -1100,7 +1096,7 @@ Break Point
         background-size: 800px auto; } }
     @media screen and (max-width: 540px) {
       .top-container #top_bg {
-        background-image: url(../img/bg_top_sp.jpg);
+        background-image: url(../img/bg/top_sp.jpg);
         height: 200px;
         background-size: 540px auto; } }
     .top-container #top_bg .overlay {
@@ -1197,7 +1193,7 @@ Break Point
       width: auto;
       padding: 0 10px; } }
   .work-container .title {
-    margin-top: 30px;
+    margin: 30px 0px 20px;
     width: 100%; }
     .work-container .title h1 {
       font-size: 160%;
@@ -1206,7 +1202,7 @@ Break Point
     .work-container .title .subtitle {
       font-size: 120%;
       color: #747477;
-      margin-top: 5px;
+      margin-top: 0px;
       line-height: 1.6em; }
   .work-container .main {
     -webkit-flex-basis: 620px;
@@ -1218,11 +1214,17 @@ Break Point
     .work-container .main .article img {
       width: 100%;
       margin: 20px 0; }
+    .work-container .main .article img:first-child {
+      margin-top: 0px; }
     .work-container .main .article p {
       line-height: 2.0em;
-      margin-bottom: 30px; }
+      margin-bottom: 15px; }
     .work-container .main .article p:last-child {
       margin-bottom: 0px; }
+    .work-container .main .article p.caption {
+      font-size: 75%;
+      text-align: center;
+      margin: -10px 0; }
     @media screen and (max-width: 940px) {
       .work-container .main .article img {
         margin: 15px 0; }
@@ -1263,7 +1265,10 @@ Break Point
         font-size: 70%;
         color: #747477;
         margin-top: 0px; }
-    .work-container .information a {
+    .work-container .information a.link {
+      color: #595A5D;
+      border-bottom: 1px dotted #595A5D; }
+    .work-container .information a.product_link {
       display: block;
       padding: 15px 65px;
       text-align: center;
@@ -1284,9 +1289,9 @@ Break Point
       border-radius: 4px;
       font-weight: bold;
       background: #747477; }
-    .work-container .information a:hover {
+    .work-container .information a.product_link:hover {
       opacity: 0.9; }
-    .work-container .information a:active {
+    .work-container .information a.product_link:active {
       box-shadow: none; }
   .work-container .back {
     -webkit-flex-basis: 620px;
@@ -1403,7 +1408,7 @@ Break Point
   margin-top: 40px;
   /*   Heading  */ }
   .works-container #heading_bg {
-    background: url(../img/bg_works.jpg);
+    background: url(../img/bg/works.jpg);
     height: 180px;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
