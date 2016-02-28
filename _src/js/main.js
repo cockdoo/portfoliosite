@@ -14,7 +14,7 @@ $(document).ready(function(){
 
   $('#menu').slicknav();
 
-  setBlur(location.href);
+  // setBlur(location.href);
 });
 
 function getElement() {
@@ -42,6 +42,21 @@ window.onscroll = function(){
 		top_bg.style.backgroundPosition = "50%" + num + "%";
 	};
 }
+
+var resizeTimer;
+var interval = Math.floor(1000 / 60 * 10);
+ 
+window.addEventListener('resize', function (event) {
+  console.log('resizing');
+  if (resizeTimer !== false) {
+    clearTimeout(resizeTimer);
+  }
+  resizeTimer = setTimeout(function () {
+    console.log('resized');
+    // setBlur(location.href);
+  }, interval);
+});
+
 
 // if文で書く
 function setBlur (url) {

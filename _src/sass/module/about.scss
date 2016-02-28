@@ -51,12 +51,13 @@ $about_tablet_width: 490px;
 				padding-bottom: 2px;
 				border-bottom: 1px solid $border_color;
 			}
-			img {
+			img.icon {
 				width: 215px;
 				border-radius: 215px;
 				margin: 20px 20px;
 			}
 			dl {
+				position: relative;
 				display: inline-block;
 				vertical-align: top;
 				margin-left: 60px;
@@ -75,20 +76,31 @@ $about_tablet_width: 490px;
 					display: inline;
 				}
 			}
+			.sns {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+
+				a img {
+					width: 25px;
+					height: 25px;
+					margin: 0;
+					margin-left: 5px;
+				}
+			}
 		}
 	}
 
 @media screen and (max-width: 768px) {
 	.plofile {
 		.holder {
-			img {
+			img.icon {
 				width: 180px;
 				height: 180px;
 				margin-top: 50px;
 			}
 			dl {
 				width: auto;
-				margin-left: 35px;
 			}
 			dd {
 				p.pc_inline {
@@ -102,14 +114,24 @@ $about_tablet_width: 490px;
 @media screen and (max-width: 540px) {
 	.plofile {
 		.holder {
-			img {
+			img.icon {
 				display: none;
 			}
 			dl {
-				margin-left: 10%;
+				margin-left: 5%;
+				margin-bottom: 40px;
 			}
 			dd {
 
+			}
+			.sns {
+				left: 0;
+				bottom: -40px;
+
+				a img {
+					margin-left: 0px;
+					margin-right: 7px;
+				}
 			}
 		}
 	}
@@ -188,10 +210,10 @@ $about_tablet_width: 490px;
 			}
 			dt {
 				flex: 40%;
-				padding-left: 10%;
+				padding-left: 5%;
 			}
 			dd {
-				flex: 50%;
+				flex: 55%;
 				margin-right: 0;
 			}
 			dt:nth-of-type(even) {
@@ -271,11 +293,11 @@ $about_tablet_width: 490px;
 				border-bottom: 1px solid $border_color;
 			}
 			dt {
-				flex: 42%;
-				padding-left: 10%;
+				flex: 43%;
+				padding-left: 5%;
 			}
 			dd {
-				flex: 48%;
+				flex: 52%;
 				margin-right: 0;
 			}
 			dt:nth-of-type(even) {
@@ -319,8 +341,6 @@ $about_tablet_width: 490px;
 @media screen and (max-width: 768px) {
 	.about_this_site {
 		flex-basis: 100%;
-		background: none;
-		padding: 0 20px;
 
 		.holder {
 			margin: 0 auto;
@@ -328,10 +348,9 @@ $about_tablet_width: 490px;
 			h2 {
 				border-bottom: 1px solid $border_color;
 			}
-
-			dl {
-				margin-top: 30px;
-				padding: 0 30px;
+			.description {
+				margin-top: 18px;
+				padding: 0 5%; 
 			}
 		}
 	}

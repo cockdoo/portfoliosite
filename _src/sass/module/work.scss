@@ -48,14 +48,14 @@
 		.article {
 			img {
 				width: 100%;
-				margin: 20px 0;
+				margin: 15px 0;
 			}
 			img:first-child {
 				margin-top: 0px;
 			}		
 			p {
 				line-height: 2.0em;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 			}
 			p:last-child {
 				margin-bottom: 0px;
@@ -104,6 +104,13 @@
 			display: inline-block;
 			line-height: 1.4em;
 
+			a {
+				color: $text_color;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+
 			.members {
 
 			}
@@ -127,6 +134,7 @@
 			text-align: center;
 			color: #fff;
 			margin-top: 10px;
+			margin-bottom: 2px;
 			border-radius: 4px;
 			font-weight: bold;
 		}
@@ -148,7 +156,12 @@
 			opacity: 0.9;
 		}
 		a.product_link:active {
+			margin-top: 12px;
+			margin-bottom: 0px;
 			box-shadow: none;
+		}
+		a.product_link:active + a.product_link {
+			margin-top: 8px;
 		}
 	}
 	

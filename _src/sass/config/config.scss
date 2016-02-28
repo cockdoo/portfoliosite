@@ -3,7 +3,7 @@
 $deep_blue: #031418;
 $orange: #EC9B52;
 $gray: #F6F6F6;
-$blue: #1BA6D3;
+$blue: #52a2ec;
 
 // $text_color: #4A4B4E;
 $text_color: #595A5D;
@@ -38,6 +38,7 @@ a {
 	flex-basis: 100%;
 	background-size: 1300px auto;
 	background-position: 50% 80%;
+	background-color: $gray;
 
 	@media screen and (min-width: 1300px) {
 		background-size: cover;
@@ -47,7 +48,7 @@ a {
 		background-size: 900px auto;
 	}
 	@media screen and (max-width: 540px) {
-		height: 100px;
+		height: 110px;
 		background-size: 600px auto;
 	}
 }
@@ -64,7 +65,7 @@ a {
 		line-height: 160px;
 	}
 	@media screen and (max-width: 540px) {
-		line-height: 110px;
+		line-height: 125px;
 		font-size: 160%;
 	}
 }

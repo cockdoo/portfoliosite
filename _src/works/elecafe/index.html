@@ -8,24 +8,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<header>
-		<nav class="global_nav">
-			<ul>
-				<li><a href="/" title="Top">Top</a></li>
-				<li><a href="/works/" title="Works">Works</a></li>
-				<li><a href="/about/" title="About">About</a></li>
-				<li><a href="/contact/" title="Contact">Contact</a></li>
-			</ul>
-		</nav>
-		<nav id="slicknav">
-      <ul id="menu">
-      	<li><a href="/" title="Top">Top</a></li>
-				<li><a href="/works/" title="Works">Works</a></li>
-				<li><a href="/about/" title="About">About</a></li>
-				<li><a href="/contact/" title="Contact">Contact</a></li>
-      </ul>
-    </nav>		
-	</header>
+	<?php include_once($_SERVER['DOCUMENT_ROOT']. "/php/header.php"); ?>
 	<div class="work-container">
 		<div class="title">
 			<h1>えれカフェ</h1>
@@ -55,7 +38,8 @@
 				</dd>
 				<dt>制作期間</dt>
 				<dd><p class="month">2015/11 - 2016/1</p><p class="term">3 Month</p></dd>
-				<span>Comming Soon</spna>
+				<a class="product_link" href="https://appsto.re/jp/ypxrab.i" title="App Store" target="_blank">App Store</a>
+				<a class="product_link" href="https://play.google.com/store/apps/details?id=ele_cafe.com" title="Google Play" target="_blank">Google Play</a>
 			</dl>
 		</div>
 		<div class="back">
